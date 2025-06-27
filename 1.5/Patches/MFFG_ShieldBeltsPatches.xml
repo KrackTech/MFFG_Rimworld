@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+  	<!-- =========== исправление крафта пояса щита =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Apparel_ShieldBelt"]/costList</xpath>
+    <value>
+	  <costList>
+        <ComponentSpacer>4</ComponentSpacer>
+		<BroadshieldCore>1</BroadshieldCore>
+        <Plasteel>20</Plasteel>
+      </costList>
+    </value>
+  </Operation>
+  
+    	<!-- =========== исправление свойств пояса щита =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Apparel_ShieldBelt"]/statBases</xpath>
+    <value>
+	  <statBases>
+        <Mass>3</Mass>
+        <WorkToMake>14000</WorkToMake>
+        <Flammability>0.4</Flammability>
+        <EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
+        <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+        <EquipDelay>2</EquipDelay>
+    </statBases>
+    </value>
+  </Operation>
+  
+    	<!-- =========== исправление крафта пояса щита =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Apparel_ShieldBelt"]/recipeMaker/skillRequirements/Crafting</xpath>
+    <value>
+	  <Crafting>12</Crafting>
+    </value>
+  </Operation>
+  
+    	<!-- =========== исправление технологий пояса щита =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ResearchProjectDef[defName="ShieldBelt"]/researchViewX</xpath>
+    <value>
+	  <researchViewX>16.00</researchViewX>
+    </value>
+  </Operation>
+  
+      	<!-- =========== исправление технологий пояса щита =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ResearchProjectDef[defName="ShieldBelt"]/researchViewY</xpath>
+    <value>
+	  <researchViewY>1.75</researchViewY>
+    </value>
+  </Operation>
+  
+        	<!-- =========== исправление технологий пояса щита =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ResearchProjectDef[defName="ShieldBelt"]/prerequisites</xpath>
+    <value>
+	  <prerequisites>
+        <li>Fabrication</li>
+      </prerequisites>
+    </value>
+  </Operation>
+  	
+</Patch>

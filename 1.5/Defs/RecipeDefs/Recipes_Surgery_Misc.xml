@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <RecipeDef ParentName="SurgeryFlesh">
+    <defName>MFFG_Shock_Therapy</defName>
+    <label>conduct shock therapy</label>
+	<workerClass>Recipe_RemoveHediff</workerClass>
+    <description>To carry out shock therapy and bring a person out of a catatonic breakdown.</description>
+    <descriptionHyperlinks>
+      <HediffDef>CatatonicBreakdown</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Conducts shock therapy.</jobString>
+	<workAmount>10000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+	<anesthetize>false</anesthetize>
+	<isViolation>false</isViolation>
+	<targetsBodyPart>false</targetsBodyPart>
+	<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+	<skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+	<ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+	  <thingDefs>
+		<li>ComponentIndustrial</li>
+	  </thingDefs>
+    </fixedIngredientFilter>
+    <removesHediff>CatatonicBreakdown</removesHediff>
+  </RecipeDef>
+
+
+</Defs>

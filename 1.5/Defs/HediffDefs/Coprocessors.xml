@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!--  Coprocessor Thing -->
+	
+	<ThingDef Abstract="True" Name="MFFG_Coprocessor_Thing" ParentName="BodyPartBionicBase">
+	  <graphicData>
+        <texPath>Things/Item/Health/HealthItem</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>0.80</drawSize>
+        <color>(189,169,118)</color>
+      </graphicData>
+      <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+      <costList>
+        <Silver>10</Silver>
+        <ComponentSpacer>4</ComponentSpacer>
+	    <AIPersonaCore>1</AIPersonaCore>
+      </costList>
+      <recipeMaker>
+        <researchPrerequisite>NeuralComputation</researchPrerequisite>
+      </recipeMaker>
+	</ThingDef>
+	
+	
+   <!-- Combat Coprocessor -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MFFG_Combat_Coprocessor</defName>
+    <label>combat coprocessor</label>
+    <labelNoun>a combat coprocessor</labelNoun>
+    <description>An installed coprocessor. An implant, a miniature computer in the user's brain controlled by a neural network. This coprocessor helps the user in combat.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_Combat_Coprocessor</ThingDef></descriptionHyperlinks>
+    <initialSeverity>0.001</initialSeverity>
+	<isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+	<stages>
+	  <li>
+	    <label>engraftment</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.35</setMax>
+          </li>
+        </capMods>
+	  </li>
+      <li>
+		<minSeverity>0.7</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>0.2</MeleeHitChance>
+		  <MeleeCooldownFactor>-0.2</MeleeCooldownFactor>
+		  <MeleeDodgeChance>0.1</MeleeDodgeChance>
+		  <MeleeDamageFactor>0.1</MeleeDamageFactor>
+		  <RangedCooldownFactor>-0.2</RangedCooldownFactor>
+		  <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+		  <AimingDelayFactor>-0.2</AimingDelayFactor>
+		  <MortarMissRadiusFactor>-0.5</MortarMissRadiusFactor>
+        </statOffsets>
+		<painFactor>0.75</painFactor>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+	  <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.1</severityPerDay>
+      </li>
+    </comps>
+	<tags><li>MFFG_Coprocessor</li></tags>
+  </HediffDef>
+
+  <ThingDef ParentName="MFFG_Coprocessor_Thing">
+    <defName>MFFG_Combat_Coprocessor</defName>
+    <label>combat coprocessor</label>
+    <description>An implant, a miniature computer in the user's brain controlled by a neural network. This coprocessor helps the user in close combat.</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_Install_Combat_Coprocessor</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>MFFG_Install_Combat_Coprocessor</defName>
+    <label>install combat coprocessor</label>
+    <description>Install a combat coprocessor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_Combat_Coprocessor</ThingDef>
+      <HediffDef>MFFG_Combat_Coprocessor</HediffDef>
+    </descriptionHyperlinks>
+	<skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <jobString>Installing coprocessor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_Combat_Coprocessor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_Combat_Coprocessor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+     <addsHediff>MFFG_Combat_Coprocessor</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>MFFG_Coprocessor</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <!-- Science Coprocessor -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MFFG_Science_Coprocessor</defName>
+    <label>science coprocessor</label>
+    <labelNoun>a science coprocessor</labelNoun>
+    <description>An installed coprocessor. An implant, a miniature computer in the user's brain controlled by a neural network. This coprocessor helps the user in science.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_Science_Coprocessor</ThingDef></descriptionHyperlinks>
+    <initialSeverity>0.001</initialSeverity>
+	<isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+	<stages>
+	  <li>
+	    <label>engraftment</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.35</setMax>
+          </li>
+        </capMods>
+	  </li>
+      <li>
+	    <minSeverity>0.7</minSeverity>
+        <statOffsets>
+			<ReadingSpeed>0.5</ReadingSpeed>
+			<MedicalTendQuality>0.2</MedicalTendQuality>
+			<GlobalLearningFactor>0.2</GlobalLearningFactor>
+			<ResearchSpeed>0.3</ResearchSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+	  <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.1</severityPerDay>
+      </li>
+    </comps>
+	<tags><li>MFFG_Coprocessor</li></tags>
+  </HediffDef>
+
+  <ThingDef ParentName="MFFG_Coprocessor_Thing">
+    <defName>MFFG_Science_Coprocessor</defName>
+    <label>science coprocessor</label>
+    <description>An implant, a miniature computer in the user's brain controlled by a neural network. This coprocessor helps the user in science.</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_Install_Science_Coprocessor</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>MFFG_Install_Science_Coprocessor</defName>
+    <label>install science coprocessor</label>
+    <description>Install a science coprocessor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_Science_Coprocessor</ThingDef>
+      <HediffDef>MFFG_Science_Coprocessor</HediffDef>
+    </descriptionHyperlinks>
+	<skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <jobString>Installing coprocessor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_Science_Coprocessor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_Science_Coprocessor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+     <addsHediff>MFFG_Science_Coprocessor</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>MFFG_Coprocessor</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <!-- Routine Coprocessor -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MFFG_Routine_Coprocessor</defName>
+    <label>routine coprocessor</label>
+    <labelNoun>a routine coprocessor</labelNoun>
+    <description>An installed coprocessor. An implant, a miniature computer in the user's brain controlled by a neural network. This coprocessor helps the user in routine tasks.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_Routine_Coprocessor</ThingDef></descriptionHyperlinks>
+    <initialSeverity>0.001</initialSeverity>
+	<isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+	<stages>
+	<li>
+	    <label>engraftment</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.35</setMax>
+          </li>
+        </capMods>
+	  </li>
+      <li>
+	    <minSeverity>0.7</minSeverity>
+        <statOffsets>
+			<WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+			<GlobalLearningFactor>-0.2</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+	  <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.1</severityPerDay>
+      </li>
+    </comps>
+	<tags><li>MFFG_Coprocessor</li></tags>
+  </HediffDef>
+
+  <ThingDef ParentName="MFFG_Coprocessor_Thing">
+    <defName>MFFG_Routine_Coprocessor</defName>
+    <label>routine coprocessor</label>
+    <description>An implant, a miniature computer in the user's brain controlled by a neural network. This coprocessor helps the user in routine tasks.</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_Install_Routine_Coprocessor</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>MFFG_Install_Routine_Coprocessor</defName>
+    <label>install routine coprocessor</label>
+    <description>Install a routine coprocessor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_Routine_Coprocessor</ThingDef>
+      <HediffDef>MFFG_Routine_Coprocessor</HediffDef>
+    </descriptionHyperlinks>
+	<skillRequirements>
+      <Medicine>15</Medicine>
+    </skillRequirements>
+    <jobString>Installing coprocessor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_Routine_Coprocessor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_Routine_Coprocessor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+     <addsHediff>MFFG_Routine_Coprocessor</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>MFFG_Coprocessor</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+
+</Defs>

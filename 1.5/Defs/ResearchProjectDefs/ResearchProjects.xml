@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>MFFG_Soil_Plowing</defName>
+		<label>soil plowing</label>
+		<description>Allows to plow the soil and increase its fertility</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tags>
+		  <li>ClassicStart</li>
+		</tags>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>5.25</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+    <defName>MFFG_AI_Core</defName>
+    <label>AI core</label>
+    <description>Build archotec core which increase research speed and allow archotec research projects.</description>
+    <baseCost>10000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>ShipComputerCore</li>
+    </prerequisites>
+	    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>19.50</researchViewX>
+    <researchViewY>1.15</researchViewY>
+  </ResearchProjectDef>
+
+  
+
+</Defs>

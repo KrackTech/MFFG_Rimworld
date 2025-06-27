@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Alcohol ====================-->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>MFFG_Alcohol</defName>
+    <label>alcohol</label>
+    <description>A synthetic precursor chemical. While it is useless on its own, many drugs require neutroamine as an ingredient.</description>
+    <possessionCount>10</possessionCount>
+	<tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Alcohol</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <stackLimit>200</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>2.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+	<comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1.1</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+        <startWickOnDamageTaken>
+          <li>Flame</li>
+        </startWickOnDamageTaken>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>70~150</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  
+
+
+
+    
+   <ThingDef ParentName="ResourceBase">
+    <defName>MFFG_Power_Cell</defName>
+    <label>power cell</label>
+    <description>A piece of ultratechnology that can generate a few energy. This can't do anything on its own, but it is necessary to craft some other power sources.\n\nPower cells can be obtained by deconstructing mechanoid cells.</description>
+    <graphicData>
+      <texPath>Things/MFFG_Power_Cell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>10</stackLimit>
+	<tickerType>Normal</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>550</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+	<comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>14.9</explosiveRadius>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <wickTicks>60~120</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+</Defs>

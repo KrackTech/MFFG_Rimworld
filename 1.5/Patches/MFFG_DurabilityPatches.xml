@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+
+	<!-- =========== исправление прочности серебра =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Silver"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>1.4</MaxHitPoints>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление прочности золото =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gold"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>1.2</MaxHitPoints>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление прочности стали =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>3</MaxHitPoints>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление прочности плассталь =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plasteel"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>8</MaxHitPoints>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление прочности уран =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Uranium"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>6</MaxHitPoints>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление прочности  нефрита=========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Jade"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>1</MaxHitPoints>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление прочности  песчаника=========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BlocksSandstone"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>2.8</MaxHitPoints>
+   </value>
+  </Operation>
+  
+  	<!-- =========== исправление прочности  гранита=========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BlocksGranite"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>3.4</MaxHitPoints>
+   </value>
+  </Operation>
+
+  	<!-- =========== исправление прочности  известняка=========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BlocksLimestone"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>3.1</MaxHitPoints>
+   </value>
+  </Operation>
+
+  	<!-- =========== исправление прочности  шиферного сланца=========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BlocksSlate"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>2.6</MaxHitPoints>
+   </value>
+  </Operation>
+  
+    	<!-- =========== исправление прочности мрамора=========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BlocksMarble"]/stuffProps/statFactors/MaxHitPoints</xpath>
+	<value>
+		<MaxHitPoints>2.4</MaxHitPoints>
+   </value>
+  </Operation>
+
+
+</Patch>

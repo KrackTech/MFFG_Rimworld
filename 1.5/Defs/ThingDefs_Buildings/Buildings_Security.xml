@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="BuildingBase">
+    <defName>MFFG_ShieldGeneratorMortar</defName>
+    <label>shield generator</label>
+    <description>A shielding device which projects a momentum repulsor field. Shots can go out, but not in.\n\nThis one is tuned to high angles, so it will block mortar rounds.\n\nThe unit can be temporarily disabled by EMP attacks, either by shocking the projector unit itself, or using EMP munitions on the shield.</description>
+    <size>(1,1)</size>
+	<thingClass>Building</thingClass>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <MarketValue>10000</MarketValue>
+      <WorkToBuild>300</WorkToBuild>
+      <Beauty>-10</Beauty>
+    </statBases>
+	<altitudeLayer>Building</altitudeLayer>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>1.0</fillPercent>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <repairEffect>ConstructMetal</repairEffect>
+    <graphicData>
+      <texPath>Things/Building/Mech/ShieldGeneratorMortar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.4, 0.6)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2, 0.2, 0.6, 0.6)</rect>
+      </damageData>
+    </graphicData>
+	<designationCategory>Security</designationCategory>
+    <building>
+	<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <placeWorkers>
+      <li>PlaceWorker_ShowProjectileInterceptorRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>25</radius>
+        <interceptAirProjectiles>true</interceptAirProjectiles>
+		<!-- <interceptGroundProjectiles>true</interceptGroundProjectiles> -->
+<!-- 		<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+		<interceptOutgoingProjectiles>true</interceptOutgoingProjectiles> -->
+        <color>(0.6, 0.6, 0.6)</color>
+        <reactivateEffect>MortarShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>MortarShield_Ambience</activeSound>
+        <disarmedByEmpForTicks>1080</disarmedByEmpForTicks>
+        <chargeIntervalTicks>600000</chargeIntervalTicks>
+        <chargeDurationTicks>60000</chargeDurationTicks>
+      </li>
+<!-- 	  <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>5000</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+	  <li Class="CompProperties_Flickable"/>-->
+    </comps> 
+    <costList>
+      <Plasteel>100</Plasteel>
+	  <ComponentSpacer>5</ComponentSpacer>
+      <BroadshieldCore>1</BroadshieldCore>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<researchPrerequisites>
+      <li>ShieldBelt</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+</Defs>

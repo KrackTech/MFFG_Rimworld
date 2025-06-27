@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- 
+  <ThingDef ParentName="DrugBase">
+    <defName>MFFG_CharCoalPill</defName>
+    <label>char coal pill</label>
+    <description>A drug for the treatment of poisoning.</description>
+    <possessionCount>10</possessionCount>
+
+    <graphicData>
+      <texPath>Things/MFFG_CharCoalPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+	<tradeability>Sellable</tradeability>
+	<tickerType>Rare</tickerType>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>10</MarketValue>
+      <Mass>0.005</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+	  <baseIngestTicks>80</baseIngestTicks>
+      <chairSearchRadius>4</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Processed</foodType>
+      <nurseable>true</nurseable>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FoodPoisoning</hediffDef>
+          <severity>0.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>DrugProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <displayPriority>2100</displayPriority>
+    </recipeMaker>
+    <costList>
+      <WoodLog>1</WoodLog>
+	  <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+    <comps>
+    </comps>
+  </ThingDef>
+   -->
+   
+   
+   
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>MFFG_CharCoalPill</defName>
+    <label>char coal pill</label>
+    <description>A drug for the treatment of poisoning.</description>
+	<possessionCount>10</possessionCount>
+    <descriptionHyperlinks><HediffDef>PenoxycylineHigh</HediffDef></descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/MFFG_CharCoalPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>18</MarketValue>
+      <Mass>0.005</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FoodPoisoning</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+            <researchPrerequisite>DrugProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <displayPriority>2100</displayPriority>
+    </recipeMaker>
+    <costList>
+      <WoodLog>1</WoodLog>
+	  <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+ 
+
+ 
+ 
+</Defs>

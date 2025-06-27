@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- =========== исправление размера стака пива =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Beer"]/stackLimit</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление размера стака серебра =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Silver"]/stackLimit</xpath>
+	<value>
+		<stackLimit>2000</stackLimit>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление размера стака золото =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gold"]/stackLimit</xpath>
+	<value>
+		<stackLimit>2000</stackLimit>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление размера стака cтали=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Steel"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+  
+  
+  	<!-- =========== исправление размера стака плассталь =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Plasteel"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление размера стака уран=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Uranium"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление размера стака нефрита=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Jade"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+	<!-- =========== исправление размера стака песчаника=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BlocksSandstone"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+  
+  	<!-- =========== исправление размера стака гранита=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BlocksGranite"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+  	<!-- =========== исправление размера стака известняка=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BlocksLimestone"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+  	<!-- =========== исправление размера стака шиферного сланца=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BlocksSlate"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+  
+    	<!-- =========== исправление размера стака мрамора=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BlocksMarble"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
+</Patch>

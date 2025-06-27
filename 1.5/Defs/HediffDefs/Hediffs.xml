@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Prosthetic spine -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>MFFG_SimpleProstheticSpine</defName>
+    <label>prosthetic spine</label>
+    <labelNoun>a prosthetic spine</labelNoun>
+    <description>Installation of special structures in the intervertebral space or in the bone, followed by their connection with each other using longitudinal beams, which significantly limits mobility and causes severe pain.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_SimpleProstheticSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>MFFG_SimpleProstheticSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.5</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <painOffset>0.2</painOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>MFFG_SimpleProstheticSpine</defName>
+    <label>prosthetic spine</label>
+    <description>A spine prosthesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Still, it is inferior to a real leg.</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_Install_SimpleProstheticSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Silver>4</Silver>
+	  <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>MFFG_Install_SimpleProstheticSpine</defName>
+    <label>install prosthetic spine</label>
+    <description>Install a prosthetic spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_SimpleProstheticSpine</ThingDef>
+      <HediffDef>MFFG_SimpleProstheticSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing prosthetic spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_SimpleProstheticSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_SimpleProstheticSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MFFG_SimpleProstheticSpine</addsHediff>
+  </RecipeDef>
+
+	<!-- Prosthetic Eye -->
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+    <defName>MFFG_Prosthetic_Eye</defName>
+    <label>prosthetic eye</label>
+    <labelNoun>a prosthetic eye</labelNoun>
+    <description>An installed small camera in the eye socket. It looks terrible, but it allows to see.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_Prosthetic_Eye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>MFFG_Prosthetic_Eye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.5</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+          <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+	
+	<ThingDef ParentName="BodyPartProstheticMakeableBase">
+		<defName>MFFG_Prosthetic_Eye</defName>
+		<label>prosthetic eye</label>
+		<description>A small camera for the eye socket. It looks terrible, but it allows to see.</description>
+		<descriptionHyperlinks><RecipeDef>MFFG_Install_Prosthetic_Eye</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Silver>10</Silver>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+		<defName>MFFG_Install_Prosthetic_Eye</defName>
+		<label>install prosthetic eye</label>
+		<description>Install a prosthetic eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MFFG_Prosthetic_Eye</ThingDef>
+			<HediffDef>MFFG_Prosthetic_Eye</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing prosthetic eye.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MFFG_Prosthetic_Eye</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MFFG_Prosthetic_Eye</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MFFG_Prosthetic_Eye</addsHediff>
+	</RecipeDef>
+
+
+  <!-- EMP relay -->
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MFFG_EMP_Relay</defName>
+    <label>EMP relay</label>
+    <labelNoun>a EMP relay</labelNoun>
+    <description>An installed EMP relay implant. The implant reacts to EMR by suppressing higher nervous activity. The carrier falls almost unconscious. These implants are banned on most utopian worlds and are used mainly in prisons to control prisoners.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_EMP_Relay</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>MFFG_EMP_Relay</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>MFFG_EMP_Relay</defName>
+    <label>EMP relay</label>
+    <description>A brain implant reacts to EMR by suppressing higher nervous activity. The carrier falls almost unconscious. These implants are banned on most utopian worlds and are used mainly in prisons to control prisoners</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_Install_EMP_Relay</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <costList>
+      <Silver>10</Silver>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<recipeMaker>
+	  <researchPrerequisite>BrainWiring</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>MFFG_Install_EMP_Relay</defName>
+    <label>install EMP relay</label>
+    <description>Install a EMP relay.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_EMP_Relay</ThingDef>
+      <HediffDef>MFFG_EMP_Relay</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing EMP relay.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_EMP_Relay</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_EMP_Relay</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MFFG_EMP_Relay</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>MFFG_Remove_EMP_Relay</defName>
+    <label>remove EMP relay</label>
+    <description>Remove the EMP relay.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_EMP_Relay</ThingDef>
+      <HediffDef>MFFG_EMP_Relay</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing EMP relay.</jobString>
+    <removesHediff>MFFG_EMP_Relay</removesHediff>
+  </RecipeDef>
+  
+  
+  
+
+    <HediffDef ParentName="ImplantHediffBase">
+    <defName>MFFG_CircadianHalfCycler</defName>
+    <label>circadian half-cycler</label>
+    <labelNoun>a circadian half-cycler</labelNoun>
+    <description>An installed circadian half-cycler. Isolates half of the brain, allowing the other half to sleep while the user remains outwardly awake. By alternating brain halves, the user never needs to sleep. Unfortunately, two hemispheres are better than one - working with half a brain causes a reduction in consciousness.</description>
+    <descriptionHyperlinks><ThingDef>CircadianHalfCycler</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CircadianHalfCycler</spawnThingOnRemoved>
+    <disablesNeeds>
+      <li>Rest</li>
+    </disablesNeeds>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- <ThingDef ParentName="BodyPartBionicImperialBase">
+    <defName>CircadianHalfCycler</defName>
+    <label>circadian half-cycler</label>
+    <description>A signal redirector which isolates half of the brain, allowing the other half to sleep while the user remains outwardly awake. By alternating brain halves, the user never needs to sleep. Unfortunately, two hemispheres are better than one - working with half a brain causes a reduction in consciousness.</description>
+    <descriptionHyperlinks><RecipeDef>InstallCircadianHalfCycler</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>CircadianInfluence</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallCircadianHalfCycler</defName>
+    <label>install circadian half-cycler</label>
+    <description>Install a circadian half-cycler.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CircadianHalfCycler</ThingDef>
+      <HediffDef>CircadianHalfCycler</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing circadian half-cycler.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CircadianHalfCycler</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CircadianHalfCycler</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CircadianHalfCycler</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveCircadianHalfCycler</defName>
+    <label>remove circadian half-cycler</label>
+    <description>Remove circadian half-cycler.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CircadianHalfCycler</ThingDef>
+      <HediffDef>CircadianHalfCycler</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing circadian half-cycler.</jobString>
+    <removesHediff>CircadianHalfCycler</removesHediff>
+  </RecipeDef>
+ -->
+ 
+ <!-- Bioreactor -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>MFFG_Bioreactor</defName>
+    <label>bioreactor</label>
+    <labelNoun>a bioreactor</labelNoun>
+    <description>An installed bioreactor. A micro biological reactor combined with complex chemical synthesis replaces the body's need for food energy. Food is required only to replace matter lost from the body, reducing the user's intake needs significantly. This artificial stomach cannot get food poisoning.</description>
+    <!-- <descriptionHyperlinks><ThingDef>NuclearStomach</ThingDef></descriptionHyperlinks> -->
+    <!-- <spawnThingOnRemoved>NuclearStomach</spawnThingOnRemoved> -->
+    <!-- <disablesNeeds> -->
+      <!-- <li>Food</li> -->
+    <!-- </disablesNeeds> -->
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.5</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <makeImmuneTo>
+          <li>GutWorms</li>
+        </makeImmuneTo>
+        <hungerRateFactor>0.1</hungerRateFactor>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <vomit>true</vomit>
+      </li>
+    </comps>
+  </HediffDef>
+<!-- 
+  <ThingDef ParentName="BodyPartBionicImperialBase">
+    <defName>NuclearStomach</defName>
+    <label>nuclear stomach</label>
+    <description>A micro-nuclear reactor combined with complex chemical synthesis replaces the body's need for food energy. Food is required only to replace matter lost from the body, reducing the user's intake needs significantly. This artificial stomach cannot get food poisoning. However, there is little room to shield the reactor, so the radiation increases the risk of cancer.</description>
+    <descriptionHyperlinks><RecipeDef>InstallNuclearStomach</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ArtificialMetabolism</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallNuclearStomach</defName>
+    <label>install nuclear stomach</label>
+    <description>Install a nuclear stomach.</description>
+    <descriptionHyperlinks>
+      <ThingDef>NuclearStomach</ThingDef>
+      <HediffDef>NuclearStomach</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing nuclear stomach.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>NuclearStomach</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>NuclearStomach</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>NuclearStomach</addsHediff>
+  </RecipeDef> -->
+
+</Defs>

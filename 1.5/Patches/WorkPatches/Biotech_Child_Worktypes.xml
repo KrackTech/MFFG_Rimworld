@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+	<!-- Patch Children Worktypes -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Human"]/race/lifeStageWorkSettings</xpath>
+				<value>
+					<MFFG_Nurse>7</MFFG_Nurse> <!-- Default Doctor 10 Recommended 7 -->
+					<MFFG_Surgeon>10</MFFG_Surgeon> <!-- Default Doctor 10 -->
+					<!-- <MFFG_Rearming>3</MFFG_Rearming>  --><!-- Default Hauling 3 Recommended 7 -->
+					<!-- <MFFG_Refueling>3</MFFG_Refueling> --> <!-- Default Hauling 3 Recommended 7 -->
+					<!-- <MFFG_Training>7</MFFG_Training> --> <!-- Default Handling 7 -->
+					<MFFG_Butcher>7</MFFG_Butcher> <!-- Default Cooking 7 -->
+					<MFFG_Brewing>7</MFFG_Brewing> <!-- Default Cooking 7 -->
+					<MFFG_Repair>10</MFFG_Repair> <!-- Default Construction 10 -->
+					<MFFG_Deconstruct>10</MFFG_Deconstruct> <!-- Default Construction 10 -->
+					<!-- <MFFG_Harvesting>7</MFFG_Harvesting> --> <!-- Default Growing 7 -->
+					<MFFG_Drilling>7</MFFG_Drilling> <!-- Default Mining 7 -->
+					<MFFG_Drugs>7</MFFG_Drugs> <!-- Default Crafting 7 -->
+					<MFFG_Fabrication>13</MFFG_Fabrication> <!-- Default Smithing 13 -->
+					<MFFG_Machining>13</MFFG_Machining> <!-- Default Smithing 13 -->
+					<!-- <MFFG_Refining>7</MFFG_Refining> --> <!-- Default Crafting 7 -->
+					<!-- <MFFG_Smelt>7</MFFG_Smelt> --> <!-- Default Crafting 7 Recommended 10 -->
+					<!-- <MFFG_StoneCut>7</MFFG_StoneCut> --> <!-- Default Crafting 7 -->
+					<!-- <MFFG_Loading>3</MFFG_Loading>  --><!-- Default Hauling 3 Recommended 7 -->
+					<!-- <MFFG_Cremating>3</MFFG_Cremating>  --><!-- Default Hauling 3 Recommended 10 -->
+					<!-- <MFFG_Deliver>3</MFFG_Deliver> --> <!-- Default Hauling 3 -->
+					<MFFG_Scan>7</MFFG_Scan> <!-- Default Research 13 Recommended 7 -->
+				</value>
+			</li>
+			
+			</operations>
+	</Operation>
+	
+</Patch>
