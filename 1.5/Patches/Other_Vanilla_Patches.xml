@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+ 	<!-- =========== добавление  перетаскиваемости топливных генераторов =========== -->
+  <Operation Class="PatchOperationSequence">
+  <operations>
+	<li Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/statBases</xpath>
+      <value>
+        <Mass>10</Mass>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="WoodFiredGenerator"]</xpath>
+      <value>
+        <thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+      </value>
+    </li>
+  </operations>
+</Operation>
+  
+  <Operation Class="PatchOperationSequence">
+  <operations>
+	<li Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/statBases</xpath>
+      <value>
+        <Mass>10</Mass>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]</xpath>
+      <value>
+        <thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+      </value>
+    </li>
+  </operations>
+  </Operation>
+  
+ 	<!-- =========== добавление  перетаскиваемости кондиционера =========== -->
+  <Operation Class="PatchOperationSequence">
+  <operations>
+	<li Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Cooler"]/statBases</xpath>
+      <value>
+        <Mass>10</Mass>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Cooler"]</xpath>
+      <value>
+        <thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+      </value>
+    </li>
+  </operations>
+</Operation>
+  
+
+  
+  	<!-- =========== исправление хайтек научного стола =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+	   <li>MFFG_AI_Core</li>
+	   <li>MFFG_Computer</li>
+    </value>
+  </Operation>
+  
+  	<!-- =========== исправление  простого научного стола =========== -->
+	
+      <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath>
+        <value>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities></linkableFacilities>
+            </li>
+        </value>
+    </Operation>
+	
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+	   <li>MFFG_Computer</li>
+    </value>
+  </Operation>
+  
+  <!-- =========== исправление длительности мозгового шока =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="BrainShock"]/comps/li[@Class="HediffCompProperties_Disappears"]/disappearsAfterTicks</xpath>
+    <value>
+      <disappearsAfterTicks>10000~15000</disappearsAfterTicks>
+    </value>
+  </Operation>
+	
+	<!-- =========== исправление эффективности батарей =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Battery"]/comps/li[@Class="CompProperties_Battery"]/efficiency</xpath>
+    <value>
+	   <efficiency>0.8</efficiency>
+    </value>
+  </Operation>
+  
+	<!-- =========== нагрев батарей =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Battery"]/comps</xpath>
+    <value>
+		<li Class="CompProperties_HeatPusher">
+          <compClass>CompHeatPusherPowered</compClass>
+          <heatPerSecond>1</heatPerSecond>
+		</li>
+    </value>
+  </Operation>
+  
+	<!-- ==== Добавление медециснких инструментов==== -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="VitalsMonitor"]] | /Defs/thingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="VitalsMonitor"]]</xpath>
+        <value>
+            <li>MFFG_Surgical_Instruments</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath>
+        <value>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities></linkableFacilities>
+            </li>
+        </value>
+    </Operation>
+
+	<!-- ====Добавление чайного столика==== -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+            <li>MFFG_Cupboard</li>
+        </value>
+    </Operation>
+	
+		<!-- ====Добавление работы на маленькй плите==== -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/WorkGiverDef[defName="DoBillsCook"]/fixedBillGiverDefs</xpath>
+        <value>
+            <li>MFFG_Electric_Stove_Small</li>
+        </value>
+    </Operation>
+	
+</Patch>

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--========================== Facilities ============================-->
+
+	<!-- Ядро ИИ -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MFFG_AI_Core</defName>
+    <label>AI core</label>
+    <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one  AI core.</description>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipComputerCore</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(2.76, 0.5, 2.66)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconScale>0.85</uiIconScale>
+    <researchPrerequisites><li>MFFG_AI_Core</li></researchPrerequisites>
+    <size>(3,3)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationHotKey>Misc4</designationHotKey>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Plasteel>100</Plasteel>
+      <Gold>50</Gold>
+      <ComponentSpacer>10</ComponentSpacer>
+	  <AIPersonaCore>5</AIPersonaCore>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>2000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.2</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  
+  <!-- Компьютер -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>MFFG_Computer</defName>
+    <label>computer</label>
+    <description>Increases research speed when placed near research bench and unlocks new research projects.</description>
+    <graphicData>
+      <texPath>Building/Facilities/MFFG_Computer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4.5,1.2)</drawSize>
+      <shadowData>
+        <volume>(2.76, 0.5, 2.66)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconScale>0.85</uiIconScale>
+    <researchPrerequisites><li>MicroelectronicsBasics</li></researchPrerequisites>
+    <size>(4,1)</size>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationHotKey>Misc4</designationHotKey>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <Gold>30</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>1000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.2</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+  </ThingDef>
+
+  
+    <!-- Медецинские инструменты -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>MFFG_Surgical_Instruments</defName>
+		<label>surgical instruments</label>
+		<description>Increases medical tend quality and surgery success factor. Only works for hospital beds - normal beds will not benefit. Attaching more than one surgical instruments to the same bed will have no effect.</description>
+		<graphicData>
+			<texPath>Building/Facilities/MFFG_Surgical_Instruments</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+		<costList>
+			<Steel>40</Steel>
+			<Plasteel>40</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>HospitalBed</li>
+		</researchPrerequisites>
+		<designationCategory>Misc</designationCategory>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
+					<SurgerySuccessChanceFactor>0.2</SurgerySuccessChanceFactor>
+				</statOffsets>
+				<maxSimultaneous>1</maxSimultaneous>
+				<!-- <mustBePlacedAdjacent>true</mustBePlacedAdjacent> -->
+			</li>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>1500</WorkToBuild>
+			<Mass>20</Mass>
+			<Flammability>1.0</Flammability>
+		</statBases>
+	</ThingDef>
+
+   <!-- Чайный столик -->
+  
+    <ThingDef ParentName="BuildingBase">
+        <defName>MFFG_Cupboard</defName>
+        <label>kitchen cupboard</label>
+        <description>Increases cooking speed when placed near a stove.</description>
+        <graphicData>
+            <texPath>Building/Facilities/MFFG_Cupboard</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.35</staticSunShadowHeight>
+        <fillPercent>0.5</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <pathCost>60</pathCost>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>50</costStuffCount>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Misc</designationCategory>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <WorkTableWorkSpeedFactor>0.25</WorkTableWorkSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+    </ThingDef>
+
+
+</Defs>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+ 
+  <MFFG_Electric_Stove_Small.label>компактная электроплита</MFFG_Electric_Stove_Small.label>
+  <MFFG_Electric_Stove_Small.description>Стол для приготовления пищи с плитой, работающей от электричества.</MFFG_Electric_Stove_Small.description>
+  
+  <!-- EN: stonecutter's table -->
+  <TableStonecutter.label>стол для резки камня</TableStonecutter.label>
+  <!-- EN: A work table with saws and chisels for cutting stone chunks into usable blocks. -->
+  <TableStonecutter.description>Рабочий стол, оснащённый для резки кусков породы на каменные блоки.</TableStonecutter.description>
+  
+</LanguageData>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- Изготовить компонент из подручных средств -->
+<MFFG_Make_Simple_ComponentIndustrial.label>изготовить компонент</MFFG_Make_Simple_ComponentIndustrial.label>
+<MFFG_Make_Simple_ComponentIndustrial.description>Изготовить компонент из подручных средств.</MFFG_Make_Simple_ComponentIndustrial.description>
+<MFFG_Make_Simple_ComponentIndustrial.jobString>Изготавливает компонент из подручных средств</MFFG_Make_Simple_ComponentIndustrial.jobString>
+
+<!-- Изготовить четыре компонента -->
+<MFFG_Make_Four_ComponentIndustrial.label>изготовить компонент x4</MFFG_Make_Four_ComponentIndustrial.label>
+<MFFG_Make_Four_ComponentIndustrial.description>Изготовить компонент.</MFFG_Make_Four_ComponentIndustrial.description>
+<MFFG_Make_Four_ComponentIndustrial.jobString>Изготавливает компонент</MFFG_Make_Four_ComponentIndustrial.jobString>
+
+<!-- Изготовить четыре продвинутых компонента -->
+<MFFG_Make_Four_ComponentSpacer.label>изготовить продвинутый компонент x4</MFFG_Make_Four_ComponentSpacer.label>
+<MFFG_Make_Four_ComponentSpacer.description>Изготовить продвинутый компонент.</MFFG_Make_Four_ComponentSpacer.description>
+<MFFG_Make_Four_ComponentSpacer.jobString>Изготавливает продвинутый компонент</MFFG_Make_Four_ComponentSpacer.jobString>
+  
+<!-- Изготовить четыре продвинутых компонента -->
+<MFFG_Make_ReinforcedBarrel.label>выточить укреплённый ствол</MFFG_Make_ReinforcedBarrel.label>
+<MFFG_Make_ReinforcedBarrel.description>Выточить укреплённый ствол.</MFFG_Make_ReinforcedBarrel.description>
+<MFFG_Make_ReinforcedBarrel.jobString>Вытачивает укреплённый ствол</MFFG_Make_ReinforcedBarrel.jobString>
+  
+
+</LanguageData>

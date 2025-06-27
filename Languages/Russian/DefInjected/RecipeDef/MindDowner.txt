@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- Чип ограничения сознания -->
+
+<InstallMindDowner.label>установить чип ограничения сознания</InstallMindDowner.label>
+<InstallMindDowner.description>Установить чип ограничения сознания</InstallMindDowner.description>
+
+<RemoveMindDowner.label>удалить чип ограничения сознания</RemoveMindDowner.label>
+<RemoveMindDowner.description>Удалить чип ограничения сознания</RemoveMindDowner.description>
+
+
+</LanguageData>

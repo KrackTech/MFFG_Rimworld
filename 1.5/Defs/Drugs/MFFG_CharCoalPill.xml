@@ -73,7 +73,7 @@
       <Mass>0.005</Mass>
       <Flammability>0.7</Flammability>
     </statBases>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Neolithic</techLevel>
     <ingestible>
       <drugCategory>Medical</drugCategory>
       <outcomeDoers>

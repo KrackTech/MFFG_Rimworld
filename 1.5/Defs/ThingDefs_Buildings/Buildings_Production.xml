@@ -445,158 +445,78 @@
     </comps>
   </ThingDef> -->
 
-  <!--======================== Nutrient dispenser ==============================-->
 
-  <!-- <ThingDef ParentName="BuildingBase">
-    <defName>NutrientPasteDispenser</defName>
-    <label>nutrient paste dispenser</label>
-    <description>A machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay.</description>
-    <thingClass>Building_NutrientPasteDispenser</thingClass>
+ <ThingDef ParentName="BuildingBase">
+    <defName>MFFG_InfiniteNeutroamineReactor</defName>
+    <label>infinite neutroamine reactor</label>
+    <description>Slowly generates neutroamine by a complex series of chemical reactions, using atoms extracted from the air.</description>
     <graphicData>
-      <texPath>Things/Building/Production/NutrientDispenser</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <color>(232,255,191)</color>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>(3,4)</drawSize>
-      <damageData>
-        <rect>(0.02,0.25,2.96,2.85)</rect>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-      </damageData>
+      <texPath>Building/Production/MFFG_InfiniteNeutroamineReactor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
       <shadowData>
-        <volume>(2.87,0.75,3.05)</volume>
-        <offset>(0,0,0.38)</offset>
+        <volume>(1.8, 1.0, 0.2)</volume>
+        <offset>(0.0, 0.0, -0.4)</offset>
       </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>Impassable</passability>
-    <blockWind>true</blockWind>
-    <fillPercent>1</fillPercent>
-    <statBases>
-      <WorkToBuild>2200</WorkToBuild>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Flammability>0.5</Flammability>
-    </statBases>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
     <building>
-      <isMealSource>true</isMealSource>
-      <wantsHopperAdjacent>true</wantsHopperAdjacent>
-      <nutritionCostPerDispense>0.3</nutritionCostPerDispense>
-      <soundDispense>DispensePaste</soundDispense>
-      <forceShowRoomStats>true</forceShowRoomStats>
-      <buildingTags>
-        <li>Production</li>
-      </buildingTags>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
     </building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>200</basePowerConsumption>
+        <basePowerConsumption>300</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Spawner">
+        <requiresPower>true</requiresPower>
+        <thingToSpawn>Neutroamine</thingToSpawn>
+        <spawnCount>40</spawnCount>
+        <spawnIntervalRange><min>600000</min><max>600000</max></spawnIntervalRange>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>8</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+	   
     </comps>
-    <size>(3,4)</size>
-    <costList>
-      <Steel>125</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
-    <placeWorkers>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <interactionCellOffset>(0,0,3)</interactionCellOffset>
-    <hasInteractionCell>true</hasInteractionCell>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Production</designationCategory>
-    <uiOrder>2130</uiOrder>
-    <constructEffect>ConstructMetal</constructEffect>
-    <designationHotKey>Misc6</designationHotKey>
-    <canOverlapZones>false</canOverlapZones>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-    <researchPrerequisites>
-      <li>NutrientPaste</li>
-    </researchPrerequisites>
-  </ThingDef> -->
-
-  <!-- <ThingDef ParentName="BuildingBase">
-    <defName>Hopper</defName>
-    <label>hopper</label>
-    <description>Holds resources for use by machines like nutrient paste dispensers.</description>
-    <thingClass>Building_Storage</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Production/Hopper</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <damageData>
-        <rect>(0.05,0.1,0.9,0.9)</rect>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-      </damageData>
-    </graphicData>
     <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.5</fillPercent>
-    <pathCost>42</pathCost>
-    <canOverlapZones>false</canOverlapZones>
-    <building>
-      <isHopper>true</isHopper>
-      <storageGroupTag>Hopper</storageGroupTag>
-      <blueprintClass>Blueprint_Storage</blueprintClass>
-      <fixedStorageSettings>
-        <priority>Important</priority>
-        <filter>
-          <categories>
-            <li>FoodRaw</li>
-          </categories>
-          <specialFiltersToDisallow>
-            <li>AllowPlantFood</li>
-          </specialFiltersToDisallow>
-        </filter>
-      </fixedStorageSettings>
-      <defaultStorageSettings>
-        <priority>Important</priority>
-        <filter>
-          <categories>
-            <li>FoodRaw</li>
-          </categories>
-          <disallowedThingDefs>
-            <li>Meat_Human</li>
-            <li>Meat_Megaspider</li>
-            <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
-          </disallowedThingDefs>
-        </filter>
-      </defaultStorageSettings>
-      <buildingTags>
-        <li>Production</li>
-      </buildingTags>
-    </building>
-    <inspectorTabs>
-      <li>ITab_Storage</li>
-    </inspectorTabs>
-    <castEdgeShadows>true</castEdgeShadows>
     <statBases>
-      <WorkToBuild>300</WorkToBuild>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>0.5</Flammability>
+      <MarketValue>1500</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+      <Mass>35</Mass>
+      <WorkToBuild>8000</WorkToBuild>
     </statBases>
-    <costList>
-      <Steel>15</Steel>
-    </costList>
-    <tickerType>Never</tickerType>
-    <rotatable>true</rotatable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <designationCategory>Production</designationCategory>
-    <uiOrder>2140</uiOrder>
-    <surfaceType>Item</surfaceType>
-    <placeWorkers>
-      <li>PlaceWorker_NextToHopperAccepter</li>
-    </placeWorkers>
-    <constructEffect>ConstructMetal</constructEffect>
-    <researchPrerequisites>
-      <li>NutrientPaste</li>
-    </researchPrerequisites>
-    <uiIconPath>Things/Building/Production/Hopper_MenuIcon</uiIconPath>
-    <uiIconScale>0.85</uiIconScale>
-  </ThingDef> -->
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tickerType>Normal</tickerType>
+    <size>(2, 2)</size>
+    <fillPercent>1.0</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <passability>Impassable</passability>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticBuilding</li>
+    </tradeTags>
+  </ThingDef>
+
+
 
 </Defs>

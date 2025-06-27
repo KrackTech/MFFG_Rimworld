@@ -2,19 +2,20 @@
 
 <Patch>
 
+	<!-- =========== исправление прочности серебра =========== -->
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
 
 	<!-- Tooltip Updates -->		
-
+				<!-- =========== исправление описания доктор =========== -->
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/WorkTypeDef[defName = "Doctor"]/description</xpath>
 				<value>
 					<description>Treat the sick. Doctors will care for colonists, prisoners and animals.</description>
 				</value>
 			</li>
-			
+		
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/WorkTypeDef[defName = "Handling"]/description</xpath>
 				<value>

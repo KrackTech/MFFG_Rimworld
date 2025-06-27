@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- простой протез позвоночника -->
+<MFFG_Install_SimpleProstheticSpine.label>вживить простой протез позвоночника</MFFG_Install_SimpleProstheticSpine.label>
+<MFFG_Install_SimpleProstheticSpine.description>Провести операцию на позвоночнике.</MFFG_Install_SimpleProstheticSpine.description>
+
+<!-- простой протез глаза -->
+<MFFG_Install_Prosthetic_Eye.label>вживить простой протез глаза</MFFG_Install_Prosthetic_Eye.label>
+<MFFG_Install_Prosthetic_Eye.description>Хирургически вживить простой протез глаза.</MFFG_Install_Prosthetic_Eye.description>
+
+<!-- ЭМП Реле -->
+<MFFG_Install_EMP_Relay.label>вживить ЭМП реле</MFFG_Install_EMP_Relay.label>
+<MFFG_Install_EMP_Relay.description>Хирургически вживить ЭМП реле.</MFFG_Install_EMP_Relay.description>
+<MFFG_Remove_EMP_Relay.label>удалить ЭМП реле</MFFG_Remove_EMP_Relay.label>
+<MFFG_Remove_EMP_Relay.description>Хирургически удалить ЭМП реле.</MFFG_Remove_EMP_Relay.description>
+
+
+</LanguageData>

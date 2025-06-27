@@ -44,6 +44,7 @@
         </capMods>
 	  </li>
       <li>
+	  <label></label>
 		<minSeverity>0.7</minSeverity>
         <statOffsets>
           <MeleeHitChance>0.2</MeleeHitChance>
@@ -86,7 +87,7 @@
       <HediffDef>MFFG_Combat_Coprocessor</HediffDef>
     </descriptionHyperlinks>
 	<skillRequirements>
-      <Medicine>15</Medicine>
+      <Medicine>10</Medicine>
     </skillRequirements>
     <jobString>Installing coprocessor.</jobString>
     <ingredients>
@@ -172,7 +173,7 @@
       <HediffDef>MFFG_Science_Coprocessor</HediffDef>
     </descriptionHyperlinks>
 	<skillRequirements>
-      <Medicine>15</Medicine>
+      <Medicine>10</Medicine>
     </skillRequirements>
     <jobString>Installing coprocessor.</jobString>
     <ingredients>
@@ -224,7 +225,7 @@
 	    <minSeverity>0.7</minSeverity>
         <statOffsets>
 			<WorkSpeedGlobal>0.3</WorkSpeedGlobal>
-			<GlobalLearningFactor>-0.2</GlobalLearningFactor>
+			<GlobalLearningFactor>0.2</GlobalLearningFactor>
         </statOffsets>
       </li>
     </stages>
@@ -256,7 +257,7 @@
       <HediffDef>MFFG_Routine_Coprocessor</HediffDef>
     </descriptionHyperlinks>
 	<skillRequirements>
-      <Medicine>15</Medicine>
+      <Medicine>10</Medicine>
     </skillRequirements>
     <jobString>Installing coprocessor.</jobString>
     <ingredients>
