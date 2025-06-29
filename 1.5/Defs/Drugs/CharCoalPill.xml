@@ -60,7 +60,7 @@
     <label>char coal pill</label>
     <description>A drug for the treatment of poisoning.</description>
 	<possessionCount>10</possessionCount>
-    <descriptionHyperlinks><HediffDef>PenoxycylineHigh</HediffDef></descriptionHyperlinks>
+    <!-- <descriptionHyperlinks><HediffDef>PenoxycylineHigh</HediffDef></descriptionHyperlinks> -->
     <graphicData>
       <texPath>Things/MFFG_CharCoalPill</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -71,7 +71,7 @@
       <WorkToMake>600</WorkToMake>
       <MarketValue>18</MarketValue>
       <Mass>0.005</Mass>
-      <Flammability>0.7</Flammability>
+      <Flammability>1</Flammability>
     </statBases>
     <techLevel>Neolithic</techLevel>
     <ingestible>
@@ -79,7 +79,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>FoodPoisoning</hediffDef>
-          <severity>1</severity>
+          <severity>0.001</severity>
         </li>
       </outcomeDoers>
     </ingestible>

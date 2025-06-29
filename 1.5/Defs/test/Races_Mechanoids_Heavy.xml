@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	  <!-- Caravelle -->
+  <ThingDef ParentName="MechCentipede">
+    <defName>MFFG_Mech_Caravelle</defName>
+    <label>caravelle</label>
+	<description>An ultraheavy mech with a built-in shield bubble generator. The caravelle carries a lot of weight.</description>
+    <statBases>
+      <MoveSpeed>1</MoveSpeed>
+      <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+      <MeleeDoorDamageFactor>3</MeleeDoorDamageFactor>
+	  <BandwidthCost>3</BandwidthCost>
+    </statBases>
+	<race>
+	  <baseBodySize>6.0</baseBodySize>
+	</race>
+	<comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>6</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>300</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
+        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li>
+    </comps>
+   </ThingDef>
+
+  <PawnKindDef ParentName="MechCentipedeBase">
+    <defName>MFFG_Mech_Caravelle</defName>
+    <label>caravelle</label>
+    <race>MFFG_Mech_Caravelle</race>
+    <lifeStages Inherit="False">
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/CentipedeGunnerClean</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/CentipedeGunner</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/CentipedeGunner</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/CentipedeGunner</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <!-- <li>Minigun</li> -->
+    </weaponTags>
+  </PawnKindDef>
+
+
+
+  
+
+
+  
+  <!-- Caravelle -->
+  <ThingDef ParentName="LancerMechanoidWalker">
+    <defName>MFFG_Mech_Caravelle_Old</defName>
+    <label>caravelle</label>
+    <description>A combat support mechanoid with a wide-range bullet shield and mid-range needle gun. Designed to support other mechanoids, the legionary is vulnerable to anyone who can get inside its shield.</description>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <MoveSpeed>5</MoveSpeed>
+      <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+      <BandwidthCost>2</BandwidthCost>
+      <ControlTakingTime>18</ControlTakingTime>
+	  <CarryingCapacity>20</CarryingCapacity>
+    </statBases>
+    <race>
+	  <baseBodySize>6.0</baseBodySize>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+          <soundCall>Pawn_Mech_Legionary_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+          <soundCall>Pawn_Mech_Legionary_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <detritusLeavings>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>16</texOverrideIndex>
+          <spawnChance>0.1</spawnChance>
+        </li>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>11</texOverrideIndex>
+          <spawnChance>0.1</spawnChance>
+        </li>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>1</texOverrideIndex>
+          <spawnChance>0.1</spawnChance>
+        </li>
+      </detritusLeavings>
+	  <mechEnabledWorkTypes>
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+    </race>
+    <comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>3</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>4000</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>10800</chargeDurationTicks><!-- 90s -->
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>MFFG_Mech_Caravelle_Old</defName>
+    <label>caravelle</label>
+    <race>MFFG_Mech_Caravelle</race>
+    <combatPower>50</combatPower>
+    <allowInMechClusters>false</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Legionary</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Legionary</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/LegionaryAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Legionary</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <!-- <weaponMoney>9999~9999</weaponMoney> -->
+    <!-- <weaponTags> -->
+      <!-- <li>MechanoidGunNeedleLauncher</li> -->
+    <!-- </weaponTags> -->
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <controlGroupPortraitZoom>1.2</controlGroupPortraitZoom>
+  </PawnKindDef>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</Defs>

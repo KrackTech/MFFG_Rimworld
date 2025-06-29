@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Medicine ====================-->
+
+
+  <ThingDef ParentName="MedicineBase">
+    <defName>MFFG_SimpleTentMaterial</defName>
+    <label>simple tent material</label>
+    <description>It is less potent than industrial pharmaceuticals, but much better than nothing.</description>
+    <possessionCount>4</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Hay</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>1.3</Flammability>
+      <MedicalPotency>0.40</MedicalPotency>
+      <MedicalQualityMax>0.50</MedicalQualityMax>
+      <DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+	<costStuffCount>5</costStuffCount>
+	<stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+	  <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+        <Intellectual>1</Intellectual>
+      </skillRequirements>
+      <bulkRecipeCount>4</bulkRecipeCount>
+      <displayPriority>2000</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+ 
+  
+</Defs>

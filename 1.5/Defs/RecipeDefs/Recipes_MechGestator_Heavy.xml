@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="HeavyMechanoidRecipe">
+    <defName>MFFG_Caravelle</defName>
+    <label>gestate caravelle</label>
+    <description>Gestate a caravelle mechanoid.</description>
+    <gestationCycles>6</gestationCycles>
+    <researchPrerequisite>HighMechtech</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>255</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>255</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreRegular</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <MFFG_Mech_Caravelle>1</MFFG_Mech_Caravelle>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_Mech_Caravelle</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+</Defs>
