@@ -24,14 +24,14 @@
     <size>(3,3)</size>
     <rotatable>false</rotatable>
     <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
+    <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.5</fillPercent>
+    <fillPercent>1</fillPercent>
     <designationHotKey>Misc4</designationHotKey>
     <designationCategory>Misc</designationCategory>
     <minifiedDef>MinifiedThing</minifiedDef>
     <canOverlapZones>false</canOverlapZones>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <thingCategories>
       <li>BuildingsMisc</li>
     </thingCategories>
@@ -59,7 +59,7 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <ResearchSpeedFactor>0.2</ResearchSpeedFactor>
+          <ResearchSpeedFactor>0.5</ResearchSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
       </li>
@@ -80,7 +80,7 @@
     <graphicData>
       <texPath>Building/Facilities/MFFG_Computer</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(4.5,1.2)</drawSize>
+      <drawSize>(3.2,1.2)</drawSize>
       <shadowData>
         <volume>(2.76, 0.5, 2.66)</volume>
         <offset>(0,0,-0.05)</offset>
@@ -88,12 +88,12 @@
     </graphicData>
     <uiIconScale>0.85</uiIconScale>
     <researchPrerequisites><li>MicroelectronicsBasics</li></researchPrerequisites>
-    <size>(4,1)</size>
+    <size>(3,1)</size>
     <rotatable>true</rotatable>
     <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
+    <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.5</fillPercent>
+    <fillPercent>1</fillPercent>
     <designationHotKey>Misc4</designationHotKey>
     <designationCategory>Misc</designationCategory>
     <minifiedDef>MinifiedThing</minifiedDef>
@@ -106,7 +106,7 @@
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>10000</WorkToBuild>
       <Mass>60</Mass>
-      <Flammability>1.0</Flammability>
+      <Flammability>0.5</Flammability>
     </statBases>
     <costList>
       <Steel>200</Steel>
@@ -133,7 +133,83 @@
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
-    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+  </ThingDef>
+
+  
+  <!-- Ламповый компьютер -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>MFFG_Lamp_Computer</defName>
+    <label>lamp computer</label>
+    <description>Increases research speed when placed near research bench and unlocks new research projects.</description>
+    <graphicData>
+      <texPath>Building/Facilities/MFFG_Lamp_Computer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+      <shadowData>
+        <volume>(3.5, 0.5, 2.5)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconScale>0.85</uiIconScale>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <size>(3,2)</size>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <designationHotKey>Misc4</designationHotKey>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>20000</WorkToBuild>
+      <Mass>100</Mass>
+      <Flammability>0.3</Flammability>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <Gold>30</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>1000</basePowerConsumption>
+		<transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>WoodFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>6</heatPerSecond>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
   </ThingDef>
 
   

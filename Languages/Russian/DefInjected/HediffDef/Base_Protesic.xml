@@ -3,7 +3,18 @@
 
 <!--  Простой протез позвоночника  -->
 <MFFG_SimpleProstheticSpine.label>простой протез позвоночника</MFFG_SimpleProstheticSpine.label>
-<MFFG_SimpleProstheticSpine.description>Установка специальных конструкций в межпозвоночное пространство или кость с последующим их соединением с помощью штифтов, значительно ограничивает подвижность и вызывает сильную боль.</MindDowner.description>
-<MindDowner.labelNoun>простой протез позвоночника</MindDowner.labelNoun>
+<MFFG_SimpleProstheticSpine.description>Установка специальных конструкций в межпозвоночное пространство или кость с последующим их соединением с помощью штифтов, значительно ограничивает подвижность и вызывает сильную боль.</MFFG_SimpleProstheticSpine.description>
+<MFFG_SimpleProstheticSpine.labelNoun>простой протез позвоночника</MFFG_SimpleProstheticSpine.labelNoun>
+
+<!--  Простой протез глаза  -->
+<MFFG_Prosthetic_Eye.label>простой протез глаза</MFFG_Prosthetic_Eye.label>
+<MFFG_Prosthetic_Eye.description>Маленькая камера, вживлённая в глазницу. Выглядит ужасно, но позволяет видеть.</MFFG_Prosthetic_Eye.description>
+<MFFG_Prosthetic_Eye.labelNoun>простой протез глаза</MFFG_Prosthetic_Eye.labelNoun>
+
+<!--  Простой протез глаза  -->
+<MFFG_EMP_Relay.label>ЭМИ реле</MFFG_EMP_Relay.label>
+<MFFG_EMP_Relay.description>Вживлённое ЭМИ реле. Имплант реагирует на воздействие электромагнитных импульсов, подавляя высшую нервную деятельность. Носитель падает праткически без сознания. Этот иплант запрещён на большинтсве утопических миров, и используется, в основном, для контроля заключённых.</MFFG_EMP_Relay.description>
+<MFFG_EMP_Relay.labelNoun>ЭМИ реле</MFFG_EMP_Relay.labelNoun>
+
 
 </LanguageData>

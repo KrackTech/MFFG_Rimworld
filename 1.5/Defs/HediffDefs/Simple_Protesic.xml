@@ -80,7 +80,7 @@
     <spawnThingOnRemoved>MFFG_Prosthetic_Eye</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.5</partEfficiency>
+      <partEfficiency>0.75</partEfficiency>
     </addedPartProps>
 	<stages>
       <li>

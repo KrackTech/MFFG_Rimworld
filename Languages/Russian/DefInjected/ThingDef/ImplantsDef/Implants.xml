@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- Простой протез позвоночника -->
+<MFFG_SimpleProstheticSpine.label>простой протез позвоночника</MFFG_SimpleProstheticSpine.label>
+<MFFG_SimpleProstheticSpine.description>Набор специальных конструкций для установки в межпозвоночное пространство или в кость. Также в набор входят шины и винты для соединения. После установки значительно ограничивает подвижность и вызывает сильную боль.</MFFG_SimpleProstheticSpine.description>
+
+<!-- Простой протез позвоночника -->
+<MFFG_Prosthetic_Eye.label>простой протез глаза</MFFG_Prosthetic_Eye.label>
+<MFFG_Prosthetic_Eye.description>Маленькая камера, вживляемая в глазницу. Выглядит ужасно, но позволяет носителю видеть.</MFFG_Prosthetic_Eye.description>
+
+<!-- Простой протез позвоночника -->
+<MFFG_EMP_Relay.label>ЭМИ реле</MFFG_EMP_Relay.label>
+<MFFG_EMP_Relay.description>Имплант реагирует на воздействие электромагнитных импульсов, подавляя высшую нервную деятельность. Носитель падает праткически без сознания. Этот иплант запрещён на большинтсве утопических миров, и используется, в основном, для контроля заключённых.</MFFG_EMP_Relay.description>
+
+
+</LanguageData>

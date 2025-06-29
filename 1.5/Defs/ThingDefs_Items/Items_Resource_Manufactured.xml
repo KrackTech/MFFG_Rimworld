@@ -44,7 +44,7 @@
   
 
 
-
+<!--=============== Power Cell ====================-->
     
    <ThingDef ParentName="ResourceBase">
     <defName>MFFG_Power_Cell</defName>

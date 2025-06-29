@@ -1,7 +1,0 @@
-    <hediffClass>HediffWithComps</hediffClass>
-    <stages>
-      <li>
-        <opinionOfOthersFactor>0</opinionOfOthersFactor>
-        <partIgnoreMissingHP>true</partIgnoreMissingHP>
-		
-		
