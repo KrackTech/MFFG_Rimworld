@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>MFFG_LastShift</defName>
+    <label>last shift</label>
+    <description>A synthetic performance-enhancing drug developed for space marines during the early days of interplanetary warfare. Go-juice blocks pain, increases movement speed, and improves the user's melee and shooting abilities.\n\nThe military chemists who created it were never able to remove its addictiveness. Some saw this as a downside; others saw it as a benefit.</description>
+    <descriptionHyperlinks>
+      <!-- <HediffDef>GoJuiceHigh</HediffDef> -->
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoJuice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>53</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <!-- <joyKind>Chemical</joyKind> -->
+      <!-- <joy>0.40</joy>
+      <drugCategory>Hard</drugCategory> -->
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MFFG_LastShift</hediffDef>
+          <severity>2</severity>
+          <!-- <toleranceChemical>GoJuice</toleranceChemical> -->
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>GoJuiceProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+      <displayPriority>1500</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Yayo>1</Yayo>
+    </costList>
+    <comps>
+<!--       <li Class="CompProperties_Drug">
+        <chemical>GoJuice</chemical>
+        <addictiveness>0.026</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li> -->
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>MFFG_LastShift</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on last shift</label>
+    <labelNoun>a last shift high</labelNoun>
+    <description>Last shift in the bloodstream. It supercharges work-related abilities.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>2.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.75</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painFactor>0.5</painFactor>
+		  <restFallFactorOffset>0.8</restFallFactorOffset>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.20</offset>
+            </li>
+			<li>
+			  <capacity>Manipulation</capacity>
+              <offset>2.0</offset>
+			</li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.35</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.50</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>MFFG_LastShift</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MFFG_LastShift</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on last shift</label>
+        <description>I feel pumped but steady. I am the bullet in flight, ready to cut through you.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+
+</Defs>
