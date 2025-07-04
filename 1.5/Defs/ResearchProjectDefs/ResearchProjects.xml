@@ -14,7 +14,7 @@
 		<researchViewY>5.25</researchViewY>
 	</ResearchProjectDef>
 	
-	<ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>MFFG_AI_Core</defName>
     <label>AI core</label>
     <description>Build archotec core which increase research speed and allow archotec research projects.</description>
@@ -29,6 +29,24 @@
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <researchViewX>19.50</researchViewX>
     <researchViewY>1.15</researchViewY>
+  </ResearchProjectDef>
+
+
+  <ResearchProjectDef>
+    <defName>MFFG_Turrety</defName>
+    <label>doubled turrets</label>
+    <description>Build new powerfull turrets.</description>
+    <baseCost>10000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+	<requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>17.00</researchViewX>
+    <researchViewY>1.90</researchViewY>
   </ResearchProjectDef>
 
   
