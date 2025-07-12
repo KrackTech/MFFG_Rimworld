@@ -9,7 +9,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>MFFG_AI_Core</defName>
     <label>AI core</label>
-    <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one  AI core.</description>
+    <description>Artificial intelligence trapped in a synthetic brain. Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one  AI core.</description>
     <graphicData>
       <texPath>Things/Building/Ship/ShipComputerCore</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

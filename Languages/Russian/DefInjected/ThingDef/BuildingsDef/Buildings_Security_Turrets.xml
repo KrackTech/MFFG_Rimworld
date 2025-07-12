@@ -41,6 +41,24 @@
   <MFFG_Gun_TurretRocket.verbs.Verb_Shoot.label>ракетная установка</MFFG_Gun_TurretRocket.verbs.Verb_Shoot.label>
   
   
+  <!-- ======================== Миниган турель ==================== -->
+  <!-- EN: minigun turret -->
+  <MFFG_Double_MinigunTurret.label>миниган-турель</MFFG_Double_MinigunTurret.label>
+  <!-- EN: A heavy double automatic turret. Its large-caliber shells do heavy damage over significant ranges, but its barrels must be refurbished after use. It  may explode when damaged. -->
+  <MFFG_Double_MinigunTurret.description>Тяжёлая сдвоенная скорострельная автоматическая турель. Для ремонта изношенного ствола требуется сталь. При повреждении может взорваться. ИИ турели не особо продвинут и не поддерживает прямого управления, так что берегитесь огня по своим.</MFFG_Double_MinigunTurret.description>
+  <!-- EN: Barrel durability -->
+  <MFFG_Double_MinigunTurret.comps.CompRefuelable.fuelGizmoLabel>Прочность стволов</MFFG_Double_MinigunTurret.comps.CompRefuelable.fuelGizmoLabel>
+  <!-- EN: Shots until barrel change -->
+  <MFFG_Double_MinigunTurret.comps.CompRefuelable.fuelLabel>Выстрелов до замены стволов</MFFG_Double_MinigunTurret.comps.CompRefuelable.fuelLabel>
+  <!-- EN: Needs new barrel -->
+  <MFFG_Double_MinigunTurret.comps.CompRefuelable.outOfFuelMessage>требуется замена стволов</MFFG_Double_MinigunTurret.comps.CompRefuelable.outOfFuelMessage>
+  
+    <!-- EN: double minigun -->
+  <MFFG_Gun_Double_MinigunTurret.label>сдвоенная миниган-пушка</MFFG_Gun_Double_MinigunTurret.label>
+  <!-- EN: A self-loading multi-barreled rapid-firing gun designed to attach to a turret. -->
+  <MFFG_Gun_Double_MinigunTurret.description>Самозарядное многоствольное скорострельное орудие, предназначенное для крепления к турельной установке.</MFFG_Gun_Double_MinigunTurret.description>
+  <!-- EN: label double minigun -->
+  <MFFG_Gun_Double_MinigunTurret.verbs.Verb_Shoot.label>сдвоенная миниган-пушка</MFFG_Gun_Double_MinigunTurret.verbs.Verb_Shoot.label>
   
   
   

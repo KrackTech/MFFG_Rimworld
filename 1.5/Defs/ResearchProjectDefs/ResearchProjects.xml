@@ -27,26 +27,26 @@
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <researchViewX>19.50</researchViewX>
+    <researchViewX>20.0</researchViewX>
     <researchViewY>1.15</researchViewY>
   </ResearchProjectDef>
 
 
   <ResearchProjectDef>
-    <defName>MFFG_Turrety</defName>
-    <label>doubled turrets</label>
+    <defName>MFFG_ImprovedTurrets</defName>
+    <label>improved turrets</label>
     <description>Build new powerfull turrets.</description>
     <baseCost>10000</baseCost>
     <techLevel>Ultra</techLevel>
     <prerequisites>
-      <li>AdvancedFabrication</li>
+      <li>HeavyTurrets</li>
     </prerequisites>
 	<requiredResearchFacilities>
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <researchViewX>17.00</researchViewX>
-    <researchViewY>1.90</researchViewY>
+    <researchViewY>2.20</researchViewY>
   </ResearchProjectDef>
 
   

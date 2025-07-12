@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+<!-- ======================== Ламповый компьютер ==================== -->
+  <!-- EN: lamp computer -->
+  <MFFG_Lamp_Computer.label>ламповый компьютер</MFFG_Lamp_Computer.label>
+  <!-- EN: Increases research speed when placed near research bench and unlocks new research projects. -->
+  <MFFG_Lamp_Computer.description>Ускоряет изучение технологий. Должен быть размещён рядом со столом для исследований. Один стол может быть соединён только с одним ламповым компьютером.</MFFG_Lamp_Computer.description>
+  
+  
+<!-- ======================== Компьютер ==================== -->
+  <!-- EN: computer -->
+  <MFFG_Computer.label>компьютер</MFFG_Computer.label>
+  <!-- EN: Increases research speed when placed near research bench and unlocks new research projects. -->
+  <MFFG_Computer.description>Ускоряет изучение технологий. Должен быть размещён рядом со столом для исследований. Один стол может быть соединён только с одним компьютером.</MFFG_Computer.description>
+  
+  
+<!-- ======================== Хирургические инструменты ==================== -->
+  <!-- EN: surgical instruments -->
+  <MFFG_Surgical_Instruments.label>хирургические инструменты</MFFG_Surgical_Instruments.label>
+  <!-- EN: Increases medical tend quality, surgery success chance, and immunity gain speed when placed directly adjacent to a hospital bed. Only works for hospital beds - normal beds will not benefit. Attaching more than one vitals monitor to the same bed will have no effect. -->
+  <MFFG_Surgical_Instruments.description>Улучшает качество лечения, повышает вероятность успешной операции. Стол должен быть размещён рядом с больничной кроватью или операционным столом. Одна кровать может быть подключена только к одному столу с инструментами.</MFFG_Surgical_Instruments.description>
+  
+
+ <!-- ======================== Кухонный гарнитур ==================== -->
+  <!-- EN: kitchen cupboard -->
+  <MFFG_Cupboard.label>кухонный гарнитур</MFFG_Cupboard.label>
+  <!-- EN:  Increases cooking speed when placed near a stove.. -->
+  <MFFG_Cupboard.description>Увеличивает скорость готовки, когда размещён рядом с плитой.</MFFG_Cupboard.description>
+  
+  
+ <!-- ======================== Ядро ИИ ==================== -->
+  <!-- EN: AI core -->
+  <MFFG_AI_Core.label>ядро ИИ</MFFG_AI_Core.label>
+  <!-- EN: Artificial intelligence trapped in a synthetic brain. Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one  AI core. -->
+  <MFFG_AI_Core.description>Искуственный интеллект, заточённый в синтетический мозг. Ускоряет изучение технологий. Ядро должно быть размещен рядом со столом для исследований. Один стол может быть соединён только с одним ядром ИИ.</MFFG_AI_Core.description>
+  
+
+
+
+</LanguageData>

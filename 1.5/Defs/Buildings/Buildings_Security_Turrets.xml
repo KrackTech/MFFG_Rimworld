@@ -98,7 +98,7 @@
     </placeWorkers>
     <designationHotKey>Misc2</designationHotKey>
     <researchPrerequisites>
-      <li>MFFG_Turrety</li>
+      <li>MFFG_ImprovedTurrets</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -187,7 +187,7 @@
       <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>
-      <li>MFFG_Turrety</li>
+      <li>MFFG_ImprovedTurrets</li>
     </researchPrerequisites>
   </ThingDef> -->
 
@@ -279,7 +279,7 @@
       <turretBurstCooldownTime>10</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>
-      <li>RocketswarmLauncher</li>
+      <li>MFFG_ImprovedTurrets</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -338,7 +338,7 @@
   <ThingDef ParentName="AutocannonTurret">
     <defName>MFFG_Double_MinigunTurret</defName>
     <label>minigun turret</label>
-    <description>A heavy double automatic turret. Its large-caliber shells do heavy damage over significant ranges, but its barrels must be refurbished after use. It cannot fire at close-up targets, and may explode when damaged.</description>
+    <description>A heavy double automatic turret. Its large-caliber shells do heavy damage over significant ranges, but its barrels must be refurbished after use. It may explode when damaged.</description>
     <uiIconPath>Building/Security/MFFG_Double_MinigunTurret_MenuIcon</uiIconPath>
     <statBases>
       <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
@@ -383,7 +383,7 @@
       <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>
-      <li>MFFG_Turrety</li>
+      <li>MFFG_ImprovedTurrets</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -391,7 +391,7 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>MFFG_Gun_Double_MinigunTurret</defName>
     <label>double minigun</label>
-    <description>A self-loading large-bore double cannon designed to attach to a turret.</description>
+    <description>A self-loading multi-barreled rapid-firing gun designed to attach to a turret.</description>
     <graphicData>
       <texPath>Building/Security/MFFG_Double_MinigunTurret_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -507,7 +507,7 @@
     </placeWorkers>
     <designationHotKey>Misc2</designationHotKey>
     <researchPrerequisites>
-      <li>MFFG_Turrety</li>
+      <li>MFFG_ImprovedTurrets</li>
     </researchPrerequisites>
   </ThingDef>
   
