@@ -7,4 +7,8 @@
   <MFFG_Nuclear_Reactor.label>ядерный реактор</MFFG_Nuclear_Reactor.label>
   <MFFG_Nuclear_Reactor.description>Высокотехнологичный источник энергии. Производит электричество и большое количество тепла. В случае перегерва произойдёт мощный взрыв. Потребляет в качестве топлива уран. Необходимо заправлять вручную.</MFFG_Nuclear_Reactor.description>
   
+  <MFFG_SmallChemfuelPoweredGenerator.label>малый генератор</MFFG_SmallChemfuelPoweredGenerator.label>
+  <MFFG_SmallChemfuelPoweredGenerator.description>Маломощный портативный источник энергии. Производит электричество и небольшое количество тепла. Потребляет химтопливо. Необходимо заправлять вручную.</MFFG_SmallChemfuelPoweredGenerator.description>
+  
+  
 </LanguageData>

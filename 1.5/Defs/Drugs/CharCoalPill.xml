@@ -54,13 +54,12 @@
    -->
    
    
-   
+   <!-- 
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>MFFG_CharCoalPill</defName>
     <label>char coal pill</label>
     <description>A drug for the treatment of poisoning.</description>
 	<possessionCount>10</possessionCount>
-    <!-- <descriptionHyperlinks><HediffDef>PenoxycylineHigh</HediffDef></descriptionHyperlinks> -->
     <graphicData>
       <texPath>Things/MFFG_CharCoalPill</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -102,7 +101,7 @@
     </comps>
   </ThingDef>
   
- 
+  -->
 
  
  

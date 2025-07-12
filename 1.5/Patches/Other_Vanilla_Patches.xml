@@ -2,6 +2,31 @@
 
 <Patch>
 
+	<!-- =========== исправление эффективности монитора жизненных показателей =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VitalsMonitor"]/comps/li[@Class="CompProperties_Facility"]/statOffsets</xpath>
+    <value>
+	  <statOffsets>
+	   <MedicalTendQualityOffset>0.2</MedicalTendQualityOffset>
+       <ImmunityGainSpeedFactor>0.1</ImmunityGainSpeedFactor>
+       <SurgerySuccessChanceFactor>0.15</SurgerySuccessChanceFactor>
+	 </statOffsets>
+    </value>
+  </Operation>
+  
+
+
+
+	<!-- =========== исправление эффективности геотермального геннератора =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GeothermalGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+    <value>
+	   <basePowerConsumption>-5600</basePowerConsumption>
+    </value>
+  </Operation>
+  
+
+
  	<!-- =========== добавление  перетаскиваемости топливных генераторов =========== -->
   <Operation Class="PatchOperationSequence">
   <operations>
@@ -18,6 +43,12 @@
 			<li>BuildingsProduction</li>
 		</thingCategories>
 		<minifiedDef>MinifiedThing</minifiedDef>
+      </value>
+    </li>
+	<li Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+      <value>
+        <basePowerConsumption>-2000</basePowerConsumption>
       </value>
     </li>
   </operations>
@@ -38,6 +69,12 @@
 			<li>BuildingsProduction</li>
 		</thingCategories>
 		<minifiedDef>MinifiedThing</minifiedDef>
+      </value>
+    </li>
+	<li Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+      <value>
+        <basePowerConsumption>-2000</basePowerConsumption>
       </value>
     </li>
   </operations>

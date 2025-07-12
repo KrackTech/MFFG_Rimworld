@@ -15,7 +15,7 @@
 		<statBases>
 			<Beauty>-1</Beauty>
 			<Cleanliness>-1</Cleanliness>
-			<WorkToBuild>100</WorkToBuild>
+			<WorkToBuild>1100</WorkToBuild>
 		</statBases>
 		<fertility>1.0</fertility>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -61,8 +61,9 @@
 		<designationCategory>Floors</designationCategory>
 		<constructEffect>ConstructDirt</constructEffect>
 		<statBases>
-			<Beauty>0</Beauty>
-			<WorkToBuild>200</WorkToBuild>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+			<WorkToBuild>2100</WorkToBuild>
 		</statBases>
 		<fertility>2.0</fertility>
 		<avoidWander>true</avoidWander>
