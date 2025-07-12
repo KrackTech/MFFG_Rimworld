@@ -87,7 +87,7 @@
     <designationCategory>Security</designationCategory>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <building>
-      <combatPower>45</combatPower>   <!-- same as a scavenger -->
+      <combatPower>60</combatPower>   <!-- same as a scavenger -->
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>MFFG_Gun_Double_MiniTurret</turretGunDef>
       <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
@@ -138,14 +138,14 @@
   </ThingDef>
 
   <!--=============== Double Autocannon turret ===============-->
-
+<!-- 
   <ThingDef ParentName="AutocannonTurret">
     <defName>MFFG_Double_Turret_Autocannon</defName>
     <label>autocannon turret</label>
     <description>A heavy double automatic turret. Its large-caliber shells do heavy damage over significant ranges, but its barrels must be refurbished after use. It cannot fire at close-up targets, and may explode when damaged.</description>
     <uiIconPath>Building/Security/MFFG_Double_TurretAutocannon_MenuIcon</uiIconPath>
     <statBases>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
     </statBases>
     <costList>
       <Steel>350</Steel>
@@ -171,8 +171,8 @@
         <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
         <outOfFuelMessage>Needs new barrel</outOfFuelMessage>
         <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
-        <fuelCapacity>180</fuelCapacity>       <!-- 30 bursts -->
-        <fuelMultiplier>0.5</fuelMultiplier>  <!-- 2 steel per burst, 180 per full rearm -->
+        <fuelCapacity>180</fuelCapacity> 
+        <fuelMultiplier>0.5</fuelMultiplier>  
         <initialFuelPercent>1</initialFuelPercent>
         <autoRefuelPercent>0.5</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
@@ -189,9 +189,10 @@
     <researchPrerequisites>
       <li>MFFG_Turrety</li>
     </researchPrerequisites>
-  </ThingDef>
+  </ThingDef> -->
 
 
+<!-- 
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>MFFG_Gun_Double_AutocannonTurret</defName>
     <label>double autocannon</label>
@@ -225,17 +226,17 @@
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
     </verbs>
-  </ThingDef>
+  </ThingDef> -->
 
   <!--=============== Turret Rocket ===============-->
 
   <ThingDef ParentName="AutocannonTurret">
     <defName>MFFG_TurretRocket</defName>
     <label>rocket turret</label>
-    <description>An emergency-defense launcher that fires a rocket.  It is very effective against large groups of weaker combatants, but less effective against small numbers of armored targets. May explode when damaged.</description>
+    <description>A self-loading launcher that fires a rocket.  It is very effective against large groups of weaker combatants, but less effective against small numbers of armored targets. May explode when damaged.</description>
     <uiIconPath>Building/Security/MFFG_TurretRocket_MenuIcon</uiIconPath>
     <statBases>
-      <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret> <!-- like level 14 human shooter -->
+      <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
     </statBases>
     <costList>
       <Steel>300</Steel>
@@ -251,24 +252,24 @@
         <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
       </li>
       <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
+     <!--  <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>150</basePowerConsumption>
-      </li>
+      </li> -->
       <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
+<!--       <li Class="CompProperties_Breakdownable"/> -->
       <li Class="CompProperties_Refuelable">
-        <fuelLabel>Shots until rearm</fuelLabel>
-        <fuelGizmoLabel>Uranium slugs</fuelGizmoLabel>
-        <outOfFuelMessage>No slugs</outOfFuelMessage>
-        <fuelFilter><thingDefs><li>Uranium</li></thingDefs></fuelFilter>
-        <fuelCapacity>10</fuelCapacity>       <!-- 20 bursts -->
-        <fuelMultiplier>0.5</fuelMultiplier> <!-- 2 uranium per shot, 60 per full rearm -->
-        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Shots until empty</fuelLabel>
+        <fuelGizmoLabel>Shells</fuelGizmoLabel>
+        <outOfFuelMessage>No shells</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Shell_HighExplosive</li></thingDefs></fuelFilter>
+        <fuelCapacity>10</fuelCapacity>
+        <fuelMultiplier>1</fuelMultiplier>
+        <initialFuelPercent>0</initialFuelPercent>
         <autoRefuelPercent>0.5</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
         <minimumFueledThreshold>1</minimumFueledThreshold>
-        <factorByDifficulty>true</factorByDifficulty>
+        <factorByDifficulty>false</factorByDifficulty>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
         <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
       </li>
@@ -282,6 +283,7 @@
     </researchPrerequisites>
   </ThingDef>
 
+
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>MFFG_Gun_TurretRocket</defName>
     <label>rocket launcher</label>
@@ -291,9 +293,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.22</AccuracyTouch>
-      <AccuracyShort>0.33</AccuracyShort>
-      <AccuracyMedium>0.5</AccuracyMedium>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
       <AccuracyLong>0.8</AccuracyLong>
       <RangedWeapon_Cooldown>10</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
@@ -301,7 +303,20 @@
       <Flammability>0</Flammability>
     </statBases>
     <verbs>
-      <li>
+	  <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_Shell_HighExplosive</defaultProjectile>
+        <warmupTime>0</warmupTime>
+		<forcedMissRadius>1.9</forcedMissRadius>
+        <minRange>11.9</minRange>
+        <range>45.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+      <!-- <li>
         <verbClass>Verb_Shoot</verbClass>
         <defaultProjectile>Bullet_DoomsdayRocket</defaultProjectile>
         <warmupTime>0</warmupTime>
@@ -313,7 +328,7 @@
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>18</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
-      </li>
+      </li> -->
     </verbs>
   </ThingDef>
 
@@ -322,11 +337,11 @@
 
   <ThingDef ParentName="AutocannonTurret">
     <defName>MFFG_Double_MinigunTurret</defName>
-    <label>autocannon turret</label>
+    <label>minigun turret</label>
     <description>A heavy double automatic turret. Its large-caliber shells do heavy damage over significant ranges, but its barrels must be refurbished after use. It cannot fire at close-up targets, and may explode when damaged.</description>
     <uiIconPath>Building/Security/MFFG_Double_MinigunTurret_MenuIcon</uiIconPath>
     <statBases>
-      <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
+      <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
     </statBases>
     <costList>
       <Steel>350</Steel>
@@ -406,6 +421,160 @@
       </li>
     </verbs>
   </ThingDef>
+
+
+  <!--=============== Megacannon  ===============-->
+
+<ThingDef ParentName="BuildingBase">
+    <defName>MFFG_Megacannon</defName>
+    <label>Megacannon</label>
+    <description>A portable automatic double turret. Requires steel to refurbish its barrel after heavy use. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Building/Security/AncientMegacannonTripod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+	<size>(3,3)</size>
+    <uiIconPath>Building/Security/MFFG_Megacannon_MenuIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>200</Mass>
+      <Beauty>-10</Beauty>
+      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>160</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip> 
+    <costList>
+      <Steel>150</Steel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+    <building>
+      <combatPower>45</combatPower>   <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>MFFG_Gun_Megacannon</turretGunDef>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+      <turretBurstCooldownTime>30</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>MFFG_Turrety</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>MFFG_Gun_Megacannon</defName>
+    <label>megacannon</label>
+    <description>A self-loading large-bore double cannon designed to attach to a turret.</description>
+    <graphicData>
+      <texPath>Building/Security/MFFG_Megacannon_Top</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>180</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>MFFG_Megacannon_Bullet</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>49.9</range>
+		<minRange>15.9</minRange>
+		<forcedMissRadius>1.9</forcedMissRadius>
+        <!-- <ticksBetweenBurstShots>5</ticksBetweenBurstShots> -->
+        <!-- <burstShotCount>1</burstShotCount> -->
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>20</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>MFFG_Megacannon_Bullet</defName>
+    <label>megacannon shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Vaporize</damageDef>
+	  <screenShakeFactor>5</screenShakeFactor>
+      <speed>80</speed>
+      <explosionRadius>3.9</explosionRadius>
+      <explosionChanceToStartFire>0</explosionChanceToStartFire>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+      <explosionEffect>GiantExplosion</explosionEffect>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_GiantBomb</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+  </ThingDef>
+
+
 
 
 

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+ <MFFG_Turret_Double_MiniTurret.label>двойная мини-турель</MFFG_Turret_Double_MiniTurret.label>
+ <MFFG_Turret_Double_MiniTurret.description>Стол, специально разработанный для использования в операционных. Оснащенн встроенным оборудованием, он улучшает результаты операций по сравнению с обычными кроватями.</MFFG_Turret_Double_MiniTurret.description>
+
+</LanguageData>

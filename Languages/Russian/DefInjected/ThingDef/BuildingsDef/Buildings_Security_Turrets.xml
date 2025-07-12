@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+<!-- ======================== Двойаняя мини турель ==================== -->
+  <!-- EN: double mini-turret -->
+  <MFFG_Turret_Double_MiniTurret.label>двойная мини-турель</MFFG_Turret_Double_MiniTurret.label>
+  <!-- EN: A portable automatic double turret. Requires steel to refurbish its barrel after heavy use. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire. -->
+  <MFFG_Turret_Double_MiniTurret.description>Небольшая переносимая двойная автоматическая турель. Для ремонта изношенного ствола требуется сталь. При повреждении может взорваться. ИИ турели не особо продвинут и не поддерживает прямого управления, так что берегитесь огня по своим.</MFFG_Turret_Double_MiniTurret.description>
+  <!-- EN: Barrel durability -->
+  <MFFG_Turret_Double_MiniTurret.comps.CompRefuelable.fuelGizmoLabel>Прочность ствола</MFFG_Turret_Double_MiniTurret.comps.CompRefuelable.fuelGizmoLabel>
+  <!-- EN: Shots until barrel change -->
+  <MFFG_Turret_Double_MiniTurret.comps.CompRefuelable.fuelLabel>Выстрелов до замены ствола</MFFG_Turret_Double_MiniTurret.comps.CompRefuelable.fuelLabel>
+  <!-- EN: Needs new barrel -->
+  <MFFG_Turret_Double_MiniTurret.comps.CompRefuelable.outOfFuelMessage>требуется замена ствола</MFFG_Turret_Double_MiniTurret.comps.CompRefuelable.outOfFuelMessage>
+  
+    <!-- EN: double mini-turret gun -->
+  <MFFG_Gun_Double_MiniTurret.label>пушка двойной мини-турели</MFFG_Gun_Double_MiniTurret.label>
+  <!-- EN: A simple double automatic gun made to be mounted on a turret. -->
+  <MFFG_Gun_Double_MiniTurret.description>Лёгкая двойная автоматическая пушка, предназначенная для крепления к турельной установке.</MFFG_Gun_Double_MiniTurret.description>
+  <!-- EN: label mini-turret gun -->
+  <MFFG_Gun_Double_MiniTurret.verbs.Verb_Shoot.label>пушка двойной мини-турели</MFFG_Gun_Double_MiniTurret.verbs.Verb_Shoot.label>
+  
+  
+  <!-- ======================== Ракетная турель турель ==================== -->
+    <!-- EN: rocket launcher -->
+  <MFFG_TurretRocket.label>ракетная установка</MFFG_TurretRocket.label>
+  <!-- EN: A self-loading launcher that fires a rocket.  It is very effective against large groups of weaker combatants, but less effective against small numbers of armored targets. May explode when damaged. -->
+  <MFFG_TurretRocket.description>Самозарядная пусковая установка, стреляющая ракетами.  Она очень эффективна против больших групп более слабых бойцов, но менее эффективна против небольшого количества бронированных целей. Может взорваться при повреждении.</MFFG_TurretRocket.description>
+  <!-- EN: Barrel durability -->
+  <MFFG_TurretRocket.comps.CompRefuelable.fuelGizmoLabel>Снаряды</MFFG_TurretRocket.comps.CompRefuelable.fuelGizmoLabel>
+  <!-- EN: Shots until barrel change -->
+  <MFFG_TurretRocket.comps.CompRefuelable.fuelLabel>Вместимость снарядов</MFFG_TurretRocket.comps.CompRefuelable.fuelLabel>
+  <!-- EN: Needs new barrel -->
+  <MFFG_TurretRocket.comps.CompRefuelable.outOfFuelMessage>требуется пополнение снарядов</MFFG_TurretRocket.comps.CompRefuelable.outOfFuelMessage>
+  
+    <!-- EN: rocket launcher -->
+  <MFFG_Gun_TurretRocket.label>ракетная установка</MFFG_Gun_TurretRocket.label>
+  <!-- EN: A self-loading rocket launcher designed to attach to a turret. -->
+  <MFFG_Gun_TurretRocket.description>Самозарядная ракетная установка, предназначенная для крепления к турельной установке.</MFFG_Gun_TurretRocket.description>
+  <!-- EN: rocket launcher -->
+  <MFFG_Gun_TurretRocket.verbs.Verb_Shoot.label>ракетная установка</MFFG_Gun_TurretRocket.verbs.Verb_Shoot.label>
+  
+  
+  
+  
+  
+</LanguageData>

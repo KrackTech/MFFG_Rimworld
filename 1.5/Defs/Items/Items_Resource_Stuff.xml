@@ -40,7 +40,7 @@
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <statFactors>
-        <MaxHitPoints>20</MaxHitPoints>
+        <MaxHitPoints>3.4</MaxHitPoints>
         <WorkToMake>2.0</WorkToMake>
         <WorkToBuild>10.0</WorkToBuild>
         <Beauty>0</Beauty>

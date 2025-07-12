@@ -10,8 +10,8 @@
     <description>It is less potent than industrial pharmaceuticals, but much better than nothing.</description>
     <possessionCount>4</possessionCount>
     <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/Hay</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/MFFG_SimpleTentMaterial</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.7</drawSize>
     </graphicData>
     <techLevel>Neolithic</techLevel>
