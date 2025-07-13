@@ -2,6 +2,42 @@
 
 <Patch>
 
+	<!-- =========== исправление размера стака камней =========== -->
+  <!-- <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name='ChunkBase']</xpath>
+	<value>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<alwaysHaulable>true</alwaysHaulable>
+   </value>
+  </Operation> -->
+  
+  
+<!--   <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name='ChunkBase']/stackLimit</xpath>
+	<value>
+		<stackLimit>10</stackLimit>
+   </value>
+  </Operation> -->
+
+<!--   <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[@Name='ChunkBase']/designateHaulable</xpath>
+  </Operation> -->
+  
+<!--   <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[@Name='ChunkBase']/saveCompressible</xpath>
+  </Operation>
+ -->
+  
+
+  
+	<!-- =========== исправление размера стака мрамора=========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WoodLog"]</xpath>
+	<value>
+		<stackLimit>200</stackLimit>
+   </value>
+  </Operation>
+
 	<!-- =========== исправление размера стака пива =========== -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Beer"]/stackLimit</xpath>
@@ -98,5 +134,11 @@
 		<stackLimit>200</stackLimit>
    </value>
   </Operation>
+  
+
+  
+  
+  
+  
 
 </Patch>

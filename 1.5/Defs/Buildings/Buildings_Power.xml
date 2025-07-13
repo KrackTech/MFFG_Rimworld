@@ -120,7 +120,7 @@
     <graphicData>
       <texPath>Things/Building/Power/Battery</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(4,3)</drawSize>  <!-- <drawSize>(2,3)</drawSize> -->
+      <drawSize>(4,3)</drawSize> 
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -186,7 +186,7 @@
   </ThingDef>
 
    <!-- Малая солнечная панель -->
-	<ThingDef ParentName="BuildingBase">
+<!-- 	<ThingDef ParentName="BuildingBase">
     <defName>MFFG_SmallSolarGenerator</defName>
     <label>small solar generator</label>
     <description>Produces electricity from sunlight. Does not work in the dark or under artificial light.</description>
@@ -249,7 +249,7 @@
       <li>SolarPanels</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-  </ThingDef>
+  </ThingDef> -->
 
 
    <!-- Малый генератор -->

@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  
+
+
+  <HediffDef>
+    <defName>MFFG_Regeneration</defName>
+    <label>regeneration</label>
+    <description>This creature is experiencing an impossibly fast rate of regeneration supported by a distant archotechnological engine. They will heal nearly any wound in a short time.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>unnatural</label>
+        <regeneration>100</regeneration>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>impossible</label>
+        <regeneration>350</regeneration>
+      </li>
+    </stages>
+  </HediffDef>
+  
+ 
+  <HediffDef>
+    <defName>BlissLobotomy</defName>
+    <label>bliss lobotomy</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person has been psychically lobotomized, placing them in a state of bliss but limiting their cognitive function.</description>
+    <clearsEgo>true</clearsEgo>
+    <stages>
+      <li>
+        <disabledWorkTags>
+          <li>Intellectual</li>
+          <li>ManualSkilled</li>
+        </disabledWorkTags>
+        <statOffsets>
+          <GlobalLearningFactor>-0.5</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>BlissLobotomy</thought>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DisruptorFlash</defName>
+    <label>disruptor flash</label>
+    <hediffClass>Hediff_DisruptorFlash</hediffClass>
+    <description>The initial psychic burst from a disruptor flare has left this creature dazed.</description>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li/>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks> <!-- 30 seconds -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PleasurePulse</defName>
+    <label>pleasure pulse</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person has been impacted by a psychic pulse of pleasurable sensations and emotions. They feel unnaturally happy, distracting them from their work.</description>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_GiveLovinMTBFactor">
+        <lovinMTBFactor>0.5</lovinMTBFactor>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>NeurosisPulse</defName>
+    <label>neurosis pulse</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person has been affected by a psychic pulse of motivated, neurotic emotions. This makes them irritable, but also motivates them to work faster.</description>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+          <JoyFallRateFactor>0.5</JoyFallRateFactor>
+        </statFactors>
+        <statOffsets>
+          <MentalBreakThreshold>0.08</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  
+  <HediffDef>
+    <defName>Metalblood</defName>
+    <label>metalblood</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This creature has the metalblood compound in their bloodstream. This substance can rapidly harden the flesh when it anticipates a blow, making the user more resistant to damage. However, the bioferrite-based chemistry of this serum also makes the user particularly vulnerable to fire.</description>
+    <skinShader>Metalblood</skinShader>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <disappearsAfterTicks>300000</disappearsAfterTicks> <!-- 5 days -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+        <damageFactors>
+          <Flame>4</Flame>
+          <Burn>4</Burn>
+        </damageFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  
+  
+  <HediffDef>
+    <defName>MFFG_MindNumbSerum</defName>
+    <label>mind-numb serum</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person's neural patterns are being moderated by an exotic serum. They're unaffected by the highs and lows of human emotion. They will never have a mental break but they will also never feel inspired.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <blocksMentalBreaks>true</blocksMentalBreaks>
+        <blocksInspirations>true</blocksInspirations>
+        <pctAllThoughtNullification>1</pctAllThoughtNullification>
+        <overrideMoodBase>0.9</overrideMoodBase>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>JuggernautSerum</defName>
+    <label>juggernaut serum</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>A serum is super-powering this person's musculature, making them stronger and faster, but reducing their mood due to discomfort.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <disappearsAfterTicks>600000</disappearsAfterTicks> <!-- 10 days -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.5</MeleeDamageFactor>
+          <InjuryHealingFactor>2</InjuryHealingFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>0.5</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BloodRage</defName>
+    <label>blood rage</label>
+    <hediffClass>Hediff_BloodRage</hediffClass>
+    <description>This creature has been exposed to blood rain, a psychofluid that induces rage. This rage will continue to grow as long as they're exposed to the blood rain, eventually resulting in a violent mental break. The effect grows quicker in some individuals, depending on their traits, psychic sensitivity, and random individual differences.</description>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <stages>
+      <li>
+        <label>very mild</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.05</minSeverity>
+        <label>mild</label>
+        <statFactors>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>moderate</label>
+        <statFactors>
+          <MeleeDamageFactor>1.25</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>severe</label>
+        <statFactors>
+          <MeleeDamageFactor>1.375</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <label>extreme</label>
+        <statFactors>
+          <MeleeDamageFactor>1.5</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>extreme</label>
+        <blocksSleeping>true</blocksSleeping>
+        <statFactors>
+          <MeleeDamageFactor>1.5</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FrenzyField</defName>
+    <label>frenzy field</label>
+    <hediffClass>Hediff_FrenzyField</hediffClass>
+    <description>This person is under the influence of a psychic field which sharpens their mental energy. They're channeling the nervous anger to move and work faster. However, any mental breaks will be violent.</description>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>very mild</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.05</minSeverity>
+        <label>mild</label>
+        <statOffsets>
+          <MoveSpeed>0.1</MoveSpeed>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.35</minSeverity>
+        <label>moderate</label>
+        <statOffsets>
+          <MoveSpeed>0.2</MoveSpeed>
+          <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.65</minSeverity>
+        <label>extreme</label>
+        <statOffsets>
+          <MoveSpeed>0.4</MoveSpeed>
+          <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CubeInterest</defName>
+    <hediffClass>Hediff_CubeInterest</hediffClass>
+    <label>cube interest</label>
+    <description>This person is drawn to the golden cube. If separated from the cube for too long, they'll start to experience negative effects.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <initialSeverity>0.1</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>curious</label>
+      </li>
+      <li>
+        <label>fascinated</label>
+        <minSeverity>0.33</minSeverity>
+        <statFactors>
+          <RestFallRateFactor>0.8</RestFallRateFactor>
+          <WorkSpeedGlobal>0.9</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <label>obsessed</label>
+        <minSeverity>0.66</minSeverity>
+        <statFactors>
+          <RestFallRateFactor>0.6</RestFallRateFactor>
+          <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <reportStringOverrides>
+      <li>
+        <jobDef>GotoWander</jobDef>
+        <reportString>Wandering and thinking about the cube.</reportString>
+      </li>
+      <li>
+        <jobDef>Wait_Wander</jobDef>
+        <reportString>Wandering and thinking about the cube.</reportString>
+      </li>
+      <li>
+        <jobDef>Wait_Asleep</jobDef>
+        <reportString>Asleep, dreaming about the cube.</reportString>
+      </li>
+      <li>
+        <jobDef>Meditate</jobDef>
+        <reportString>Meditating on the cube.</reportString>
+      </li>
+      <li>
+        <jobDef>Pray</jobDef>
+        <reportString>Praying for the cube.</reportString>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <jobDef>MeditatePray</jobDef>
+        <reportString>Praying for the cube.</reportString>
+      </li>
+    </reportStringOverrides>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>CubeWithdrawal</defName>
+    <hediffClass>Hediff_CubeWithdrawal</hediffClass>
+    <label>cube withdrawal</label> 
+    <description>This person obsessively wants to find their golden cube. Their skin itches and their mind races, thinking of ways to get closer to the cube. Their symptoms will get worse until they play with the cube.</description> 
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>inital</label> 
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label> 
+        <minSeverity>0.35</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label> 
+        <minSeverity>0.65</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>CubeComa</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>cube coma</label> 
+    <description>This person was connected to a golden cube and then separated from it. Severing the link this way has put them in a coma.</description> 
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.1</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CubeRage</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>cube anger</label>
+    <description>This person is upset that their cube sculptures have been destroyed. Continuing to destroy their sculptures may cause them to become violent.</description>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_CauseMentalState">
+        <overrideLetterLabel>Cube rage: {PAWN_nameDef}</overrideLetterLabel>
+        <overrideLetterDesc>{PAWN_nameDef} can no longer control {PAWN_possessive} anger. Too many of {PAWN_possessive} precious cube sculptures have been destroyed.\n\n{PAWN_nameDef} has flown into a berserk rage!</overrideLetterDesc>
+        <humanMentalState>Berserk</humanMentalState>
+        <mtbDaysToCauseMentalState>0.04</mtbDaysToCauseMentalState>
+        <removeOnTriggered>true</removeOnTriggered>
+        <endMentalStateOnCure>false</endMentalStateOnCure>
+        <minSeverity>1</minSeverity>
+        <forced>true</forced>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>VoidShock</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>void shock</label> 
+    <description>This individual has witnessed the void. Their mind reels from the shock, overflowing with visions of infinite roiling, squirming, searing darkness stretching into the bottomless abyss from every surface and every screaming face.</description>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.1</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BrainwipeComa</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>brainwipe coma</label>
+    <description>This person has had their memories erased. The violent nature of the process has put them into a coma.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>VoidTouched</defName>
+    <label>void touched</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person has seen the depths of the void and drank from its essence. It lives inside them still, guiding their actions and twisting their flesh. It has turned their hair brittle and white. They no longer need sleep or comfort. The void provides for them.</description>
+    <isBad>false</isBad>
+    <disablesNeeds>
+      <li>Rest</li>
+      <li>Comfort</li>
+    </disablesNeeds>
+    <hairColorOverride>(250, 250, 250)</hairColorOverride>
+    <stages>
+      <li>
+        <statFactors>
+          <StudyEfficiency>2</StudyEfficiency>
+          <PsychicSensitivity>2</PsychicSensitivity>
+        </statFactors>
+        <regeneration>100</regeneration>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>VoidTerror</li>
+        </abilityDefs>
+      </li>
+    </comps>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <parentTagDef>Head</parentTagDef>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <parentTagDef>Head</parentTagDef>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CorpseTorment</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>corpse torment</label>
+    <description>This person shares a psychic link with a corpse that appears to be their exact duplicate. They have done something to anger it, causing them to fall unconscious.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PsychicallyDead</defName>
+    <label>psychically dead</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person's psychic presence has been consumed and burned away, leaving them cut off from psychic phenomena.</description>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <statFactors>
+          <PsychicSensitivity>0</PsychicSensitivity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Psychophage</defName>
+    <label>psychophage</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person has devoured the psychic presence of another, making them more psychically sensitive for a period of time.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>SleepSuppression</defName>
+    <label>sleep suppression</label>
+    <hediffClass>Hediff_SleepSuppression</hediffClass>
+    <description>This person's brain chemistry is being affected by a psychic pulsation, preventing the buildup of fatigue toxins. This reduces their need for sleep.</description>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>very mild</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>mild</label>
+        <minSeverity>0.1</minSeverity>
+        <statFactors>
+          <RestFallRateFactor>0.5</RestFallRateFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.35</minSeverity>
+        <statFactors>
+          <RestFallRateFactor>0.15</RestFallRateFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.65</minSeverity>
+        <statFactors>
+          <RestFallRateFactor>0</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ShardHolder</defName>
+    <hediffClass>Hediff_ShardHolder</hediffClass>
+    <label>shard holder</label> <!-- won't be seen outside of dev-mode -->
+    <description>This creature will drop a shard when defeated. This text is visible in dev mode only.</description> <!-- won't be seen outside of dev-mode -->
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>RageSpeed</defName>
+    <label>rage speed</label>
+    <description>This creature has been enraged by its wounds and is moving faster.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <MoveSpeed>1.75</MoveSpeed>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Effecter">
+        <stateEffecter>RageSpeedState</stateEffecter>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+        <disappearsAfterTicks>3600</disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>Inhumanized</defName>
+    <label>inhumanization</label>
+    <hediffClass>Hediff_Inhumanized</hediffClass>
+    <description>This person's mind is dominated by the psychic patterns of the void. They are completely disconnected from human concerns of family, friendship, and love. Their experience of reality is distant and muted, guided by the psychic rhythm of a dark hyperintelligence.</description>
+    <everCurableByItem>false</everCurableByItem>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <allowedMeditationFocusTypes>
+      <li>Void</li>
+    </allowedMeditationFocusTypes>
+    <disablesNeeds>
+      <li>Beauty</li>
+      <li>Outdoors</li>
+    </disablesNeeds>
+    <aptitudes>
+      <Animals>-12</Animals>
+      <Social>-12</Social>
+      <Artistic>-12</Artistic>
+    </aptitudes>
+    <stages>
+      <li>
+        <painOffset>-0.5</painOffset>
+        <opinionOfOthersFactor>0</opinionOfOthersFactor>
+        <statOffsets>
+          <ComfyTemperatureMin>-16</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>LightExposure</defName>
+    <label>light exposure</label>
+    <description>Even the slightest exposure to light causes great discomfort to this creature, slowing it and weakening its attacks.</description>
+    <hediffClass>Hediff_LightExposure</hediffClass>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0</initialSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.1</minSeverity>
+        <statOffsets>
+          <MeleeCooldownFactor>1.25</MeleeCooldownFactor>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>0.9</MoveSpeed>
+        </statFactors>
+        <painOffset>0.05</painOffset>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.4</minSeverity>
+        <statOffsets>
+          <MeleeCooldownFactor>1.5</MeleeCooldownFactor>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>0.8</MoveSpeed>
+        </statFactors>
+        <painOffset>0.1</painOffset>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <MeleeCooldownFactor>2</MeleeCooldownFactor>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>0.5</MoveSpeed>
+        </statFactors>
+        <painOffset>0.15</painOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DarknessExposure</defName>
+    <label>darkness exposure</label>
+    <description>This person is immersed in the unnatural darkness. Creatures or influences in the darkness will harm them if they stay too long.</description>
+    <hediffClass>Hediff_DarknessExposure</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>BioferriteExtracted</defName>
+    <label>bioferrite extracted</label>
+    <description>Bioferrite has been surgically removed from this entity. It will regenerate, but the process takes days.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <stages>
+      <li>
+        <painOffset>0.1</painOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+        <disappearsAfterTicks>480000</disappearsAfterTicks> <!-- 8 days -->
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

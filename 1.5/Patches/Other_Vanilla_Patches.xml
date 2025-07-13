@@ -14,8 +14,14 @@
     </value>
   </Operation>
   
-
-
+  <!-- =========== исправление графики рекативного огнемёта =========== -->
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/graphicData/texPath</xpath>
+    <value>
+		<texPath>Things/Item/Equipment/WeaponRanged/SmokeLauncher</texPath>
+    </value>
+  </Operation>
+  
 
 	<!-- =========== исправление эффективности геотермального геннератора =========== -->
   <Operation Class="PatchOperationReplace">

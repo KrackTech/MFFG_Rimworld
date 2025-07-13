@@ -49,7 +49,7 @@
    <ThingDef ParentName="ResourceBase">
     <defName>MFFG_Power_Cell</defName>
     <label>power cell</label>
-    <description>A piece of ultratechnology that can generate a few energy. This can't do anything on its own, but it is necessary to craft some other power sources.\n\nPower cells can be obtained by deconstructing mechanoid cells.</description>
+    <description>A vanometric energy core that can extract energy from quantum foam fluctuations indefinitely.\n\n The cell itself is useless, but it is necessary for creating other highly technological autonomous items. Energy cells can be obtained by dismantling unstable energy cells from mechanoids.</description>
     <graphicData>
       <texPath>Things/MFFG_Power_Cell</texPath>
       <graphicClass>Graphic_Single</graphicClass>

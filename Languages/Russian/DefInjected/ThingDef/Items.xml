@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+
+  <!-- EN: power cell -->
+  <MFFG_Power_Cell.label>энергоячейка</MFFG_Power_Cell.label>
+  <!-- EN: A piece of ultratechnology that can generate a few energy. This can't do anything on its own, but it is necessary to craft some other power sources.\n\nPower cells can be obtained by deconstructing mechanoid cells. -->
+  <MFFG_Power_Cell.description>Ванометрическое энергоядро, которое может бесконечно долго извлекать энергию из флуктуаций квантовой пены. Сама по себе ячейка бесполезна, но она необходима при создании других высокотехнологичных автономных вещей.\n\nЭнергоячейки можно получить, разобрав нестабильные энергоячейки механоидов.</MFFG_Power_Cell.description>
+  
+</LanguageData>

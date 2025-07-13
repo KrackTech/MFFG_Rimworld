@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+
+  <!-- EN: grenades launcher -->
+  <MFFG_Gun_GrenadesLauncher.label>осколочный гранатомёт</MFFG_Gun_GrenadesLauncher.label>
+  <!-- EN: A wide-barreled grenades shell launcher. The shell will explode, damaging anything and anyone nearby. -->
+  <MFFG_Gun_GrenadesLauncher.description>Крупнокалиберный гранатомет, стреляющий разрывными снарядами. При попадании снаряд взорвется, нанося урон всем, кто находится поблизости.</MFFG_Gun_GrenadesLauncher.description>
+  
+    <!-- EN: flamethrower -->
+  <MFFG_Gun_Flamethrower.label>огнемёт</MFFG_Gun_Flamethrower.label>
+  <!-- EN: A flamethrower that spews flames in the shape of a cone. Beware of the fire. -->
+  <MFFG_Gun_Flamethrower.description>Огнёмёт, извергающий пламя по форме конуса. Берегись огня.</MFFG_Gun_Flamethrower.description>
+  
+      <!-- EN: incendiary launcher -->
+  <Gun_IncendiaryLauncher.label>зажигательный гранатомёт</Gun_IncendiaryLauncher.label>
+  <!-- EN: A wide-barreled incendiary bolt launcher. The bolts create small incendiary explosions on impact, starting fires. -->
+  <MFFG_Gun_GrenadesLauncher.description>Крупнокалиберный гранатомет, стреляющий зажигательными снарядами. При попадании снаряд взорвется, поджигая всё поблизости.</MFFG_Gun_GrenadesLauncher.description>
+  
+  
+  
+  
+</LanguageData>
