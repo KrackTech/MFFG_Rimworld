@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ===============  Auto charge blaster =============== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MFFG_Turret_AutoChargeBlaster</defName>
+    <label>auto charge turret</label>
+    <description>A turret mounted with a charge blaster. It cannot sense targets at very short ranges.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+	<uiIconPath>Building/Security/MFFG_Turret_AutoChargeBlaster_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Mech/TurretMechLarge_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <drawOffset>(0,0,-0.16)</drawOffset>
+      <damageData>
+        <rect>(0.3,0.3,1.4,1.4)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.5,0.35,1.4)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <size>(3,3)</size>
+<!-- 	<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories> -->
+    <statBases>
+	  <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>400</Mass>
+      <Beauty>-5</Beauty>
+      <WorkToBuild>15000</WorkToBuild>
+    </statBases>
+    <damageMultipliers>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>8.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+	<costList>
+      <Steel>350</Steel>
+      <Plasteel>40</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <researchPrerequisites>
+      <li>MFFG_ImprovedTurrets</li>
+    </researchPrerequisites>
+    <killedLeavings>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+    </killedLeavings>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <combatPower>300</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>MFFG_Gun_ChargeBlasterHeavyTurret</turretGunDef>
+      <turretBurstCooldownTime>5.5</turretBurstCooldownTime>
+      <turretTopDrawSize>3</turretTopDrawSize>
+      <!-- <turretTopOffset>(0, 0.05)</turretTopOffset> -->
+      <!-- <soundAmbient>MechTurretBig_Call</soundAmbient> -->
+    </building>
+	<designationCategory>Security</designationCategory>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <uiIconScale>0.95</uiIconScale>
+	<designationHotKey>Misc3</designationHotKey>    
+  </ThingDef>
+
+  <ThingDef ParentName="Gun_ChargeBlasterHeavyBase">
+    <defName>MFFG_Gun_ChargeBlasterHeavyTurret</defName> 
+    <label>light charge blaster</label>
+    <description>A pulse-charged rapid-fire blaster for area fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterLight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+	   <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MFFG_Bullet_ChargeBlasterHeavy</defaultProjectile>
+        <warmupTime>1.25</warmupTime>
+        <minRange>3.9</minRange>
+        <range>45.9</range>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>15</burstShotCount>
+        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  
+
+
+  <!-- Heavy charge blaster -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>MFFG_Bullet_ChargeBlasterHeavy</defName>
+    <label>charge blaster shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+
+
+
+
+</Defs>

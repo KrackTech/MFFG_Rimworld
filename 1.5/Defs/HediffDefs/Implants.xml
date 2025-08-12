@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	
+	
+	  <!-- ================== Третий глаз ==================-->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MFFG_TripleEye</defName>
+    <label>triple eye</label>
+    <labelNoun>a triple eye</labelNoun>
+    <description>An installed triple eye implant. It stimulates the growth of brain regions associated with mental interaction, thereby increasing mental sensitivity. The psychoactive cortex completely replaces the visual cortex, completely depriving the wearer of vision.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_TripleEye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>MFFG_TripleEye</spawnThingOnRemoved>
+    <stages>
+      <li>
+	  <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <setMax>0</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>2</PsychicSensitivity>
+		  <PsychicRitualQuality>0.2</PsychicRitualQuality>
+		  <MeditationFocusGain>1</MeditationFocusGain>
+		  <PsychicEntropyRecoveryRate>0.3</PsychicEntropyRecoveryRate>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartRoyalBase">
+    <defName>MFFG_TripleEye</defName>
+    <label>triple eye</label>
+    <description>The brain implant strongly stimulates the growth of brain regions associated with mental interaction, thereby increasing mental sensitivity. The psychoactive cortex completely replaces the visual cortex of the brain, which deprives the wearer of vision.</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_InstallTripleEye</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>MFFG_InstallTripleEye</defName>
+    <label>install triple eye</label>
+    <description>Install a triple eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_TripleEye</ThingDef>
+      <HediffDef>MFFG_TripleEye</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing triple eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_TripleEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_TripleEye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MFFG_TripleEye</addsHediff>
+  </RecipeDef>
+  
+
+</Defs>

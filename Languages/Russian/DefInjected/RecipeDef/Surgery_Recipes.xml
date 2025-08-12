@@ -16,4 +16,17 @@
 <MFFG_Remove_EMP_Relay.description>Хирургически удалить ЭМП реле.</MFFG_Remove_EMP_Relay.description>
 
 
+<!-- третий глаз -->
+<MFFG_InstallTripleEye.label>вживить третий глаз</MFFG_InstallTripleEye.label>
+<MFFG_InstallTripleEye.description>Хирургически вживить третий глаз.</MFFG_InstallTripleEye.description>
+
+<!-- шоковая терапия -->
+<MFFG_Shock_Therapy.label>провести шоковую терапию</MFFG_Shock_Therapy.label>
+<MFFG_Shock_Therapy.description>Провести шоковую терапию и вывести человека из состояния кататонического ступора.</MFFG_Shock_Therapy.description>
+
+<!-- промывание желудка -->
+<MFFG_Gastric_Lavage.label>провести промывание желудка</MFFG_Gastric_Lavage.label>
+<MFFG_Gastric_Lavage.description>Процедура удаления токсинов и вредных веществ из желудка, что помогает предотвратить пищевое отравление организма.</MFFG_Gastric_Lavage.description>
+
+
 </LanguageData>

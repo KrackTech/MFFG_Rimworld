@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- Изготовить четыре компонента -->
+<MFFG_Make_Neutroamine.label>синтезировать нейтроамин x4</MFFG_Make_Neutroamine.label>
+<MFFG_Make_Neutroamine.description>Синтезировать нейтроамин.</MFFG_Make_Neutroamine.description>
+<MFFG_Make_Neutroamine.jobString>Синтезирует нейтроамин</MFFG_Make_Neutroamine.jobString>
+
+<!-- Изготовить синткань -->
+<MFFG_Make_Synthread.label>изготовить синткань x10</MFFG_Make_Synthread.label>
+<MFFG_Make_Synthread.description>Изготовить синткань.</MFFG_Make_Synthread.description>
+<MFFG_Make_Synthread.jobString>Изготавливает синткань</MFFG_Make_Synthread.jobString>
+  
+
+</LanguageData>

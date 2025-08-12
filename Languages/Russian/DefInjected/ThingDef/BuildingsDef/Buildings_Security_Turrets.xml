@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-<!-- ======================== Двойаняя мини турель ==================== -->
+<!-- ======================== Двойаняя мини турель ======================== -->
   <!-- EN: double mini-turret -->
   <MFFG_Turret_Double_MiniTurret.label>двойная мини-турель</MFFG_Turret_Double_MiniTurret.label>
   <!-- EN: A portable automatic double turret. Requires steel to refurbish its barrel after heavy use. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire. -->
@@ -21,7 +21,7 @@
   <MFFG_Gun_Double_MiniTurret.verbs.Verb_Shoot.label>пушка двойной мини-турели</MFFG_Gun_Double_MiniTurret.verbs.Verb_Shoot.label>
   
   
-  <!-- ======================== Ракетная турель турель ==================== -->
+  <!-- ======================== Ракетная турель турель ======================== -->
     <!-- EN: rocket launcher -->
   <MFFG_TurretRocket.label>ракетная установка</MFFG_TurretRocket.label>
   <!-- EN: A self-loading launcher that fires a rocket.  It is very effective against large groups of weaker combatants, but less effective against small numbers of armored targets. May explode when damaged. -->
@@ -41,7 +41,7 @@
   <MFFG_Gun_TurretRocket.verbs.Verb_Shoot.label>ракетная установка</MFFG_Gun_TurretRocket.verbs.Verb_Shoot.label>
   
   
-  <!-- ======================== Миниган турель ==================== -->
+  <!-- ======================== Миниган турель ======================== -->
   <!-- EN: minigun turret -->
   <MFFG_Double_MinigunTurret.label>миниган-турель</MFFG_Double_MinigunTurret.label>
   <!-- EN: A heavy double automatic turret. Its large-caliber shells do heavy damage over significant ranges, but its barrels must be refurbished after use. It  may explode when damaged. -->
@@ -59,6 +59,51 @@
   <MFFG_Gun_Double_MinigunTurret.description>Самозарядное многоствольное скорострельное орудие, предназначенное для крепления к турельной установке.</MFFG_Gun_Double_MinigunTurret.description>
   <!-- EN: label double minigun -->
   <MFFG_Gun_Double_MinigunTurret.verbs.Verb_Shoot.label>сдвоенная миниган-пушка</MFFG_Gun_Double_MinigunTurret.verbs.Verb_Shoot.label>
+  
+  
+  
+  
+  
+  
+   <!-- ======================== Энергетическая турель ======================== -->
+    <!-- EN: auto charge turret -->
+  <MFFG_Turret_AutoChargeBlaster.label>энергетическая турель</MFFG_Turret_AutoChargeBlaster.label>
+  <!-- EN: A turret mounted with a charge blaster. It cannot sense targets at very short ranges. -->
+  <MFFG_Turret_AutoChargeBlaster.description>Турель с энергетическим бластером. Не может обнаруживать цели на очень близкой дистанции.</MFFG_Turret_AutoChargeBlaster.description>
+  
+    <!-- EN: light charge blaster -->
+  <MFFG_Gun_ChargeBlasterHeavyTurret.label>бластер</MFFG_Gun_ChargeBlasterHeavyTurret.label>
+  <!-- EN: A pulse-charged rapid-fire blaster for area fire. -->
+  <MFFG_Gun_ChargeBlasterHeavyTurret.description>Скорострельный энергетический бластер для ведения огня на подавление.</MFFG_Gun_ChargeBlasterHeavyTurret.description>
+  <!-- EN: barrel -->
+  <MFFG_Gun_ChargeBlasterHeavyTurret.tools.barrel.label>ствол</MFFG_Gun_ChargeBlasterHeavyTurret.tools.barrel.label>
+  <!-- EN: light charge blaster -->
+  <MFFG_Gun_ChargeBlasterHeavyTurret.verbs.Verb_Shoot.label>бластер</MFFG_Gun_ChargeBlasterHeavyTurret.verbs.Verb_Shoot.label>
+  
+  <!-- EN: charge blaster shot -->
+  <MFFG_Bullet_ChargeBlasterHeavy.label>сгусток энергии</MFFG_Bullet_ChargeBlasterHeavy.label>
+  
+  
+    
+  
+   <!-- ======================== Мегапушка ======================== -->
+    <!-- EN: megacannon -->
+  <MFFG_Megacannon.label>плазменная мегапушка</MFFG_Megacannon.label>
+  <!-- EN: A weapon of incredible power. Accumulates energy into a plasma ball and shoots it. After disintegrating, the plasma vaporizes everything in a small radius. -->
+  <MFFG_Megacannon.description>Оружие невероятной мощи. Долго накапливает энергию в плазменный шар и выстреливает ей. Распавшись, плазма испаряет всё в небольшом радиусе.</MFFG_Megacannon.description>
+  
+    <!-- EN: megacannon -->
+  <MFFG_Gun_Megacannon.label>мегапушка</MFFG_Gun_Megacannon.label>
+  <!-- EN: A weapon of incredible power. Accumulates energy into a plasma ball and shoots it. After disintegrating, the plasma vaporizes everything in a small radius. -->
+  <MFFG_Gun_Megacannon.description>Оружие невероятной мощи. Долго накапливает энергию в плазменный шар и выстреливает ей. Распавшись, плазма испаряет всё в небольшом радиусе.</MFFG_Gun_Megacannon.description>
+  <!-- EN: barrel -->
+  <MFFG_Gun_Megacannon.tools.barrel.label>ускоритель</MFFG_Gun_Megacannon.tools.barrel.label>
+  <!-- EN: light charge blaster -->
+  <MFFG_Gun_Megacannon.verbs.Verb_Shoot.label>мегапушка</MFFG_Gun_Megacannon.verbs.Verb_Shoot.label>
+  
+  <!-- EN: charge blaster shot -->
+  <MFFG_Megacannon_Bullet.label>сгусток плазмы</MFFG_Megacannon_Bullet.label>
+  
   
   
   

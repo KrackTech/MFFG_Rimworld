@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+    <DamageDef ParentName="Vaporize">
+    <defName>MFFG_Vaporize</defName>
+    <defaultDamage>2000</defaultDamage>
+<!--     <defaultStoppingPower>2.0</defaultStoppingPower>
+    <defaultArmorPenetration>1.30</defaultArmorPenetration> -->
+	<buildingDamageFactor>500</buildingDamageFactor>
+  </DamageDef>
+ 
+  <DamageDef Name="MFFG_Nuclear_Bomb">
+    <defName>MFFG_Nuclear_Bomb</defName>
+    <label>nuclear bomb</label>
+    <!-- <workerClass>DamageWorker_AddInjury</workerClass> -->
+	<workerClass>DamageWorker_AddGlobal</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>30</minDamageToFragment>
+    <defaultDamage>5000</defaultDamage>
+    <defaultStoppingPower>5</defaultStoppingPower>
+    <defaultArmorPenetration>10</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+	<!-- <buildingDamageFactor>10</buildingDamageFactor> -->
+     <plantDamageFactor>4</plantDamageFactor>
+    <corpseDamageFactor>0.5</corpseDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+  
+</Defs>

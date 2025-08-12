@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <MFFG_LastShift.label>последняя смена</MFFG_LastShift.label>
+  <MFFG_LastShift.description>Синтетический препарат, улучшающий рабочие навыки. \nДлительный приём может вызывать необратимые патологии мозга.</MFFG_LastShift.description>
+  
+		
+  <MFFG_PsyBlockade.label>пси-блокада</MFFG_PsyBlockade.label>
+  <MFFG_PsyBlockade.description>Синтетический препарат, подавляющий области мозга, отвечающие за психочувствительности.</MFFG_PsyBlockade.description>
+  
+  
+</LanguageData>

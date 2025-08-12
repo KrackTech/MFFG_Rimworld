@@ -16,10 +16,14 @@
 <MFFG_Make_Four_ComponentSpacer.description>Изготовить продвинутый компонент.</MFFG_Make_Four_ComponentSpacer.description>
 <MFFG_Make_Four_ComponentSpacer.jobString>Изготавливает продвинутый компонент</MFFG_Make_Four_ComponentSpacer.jobString>
   
-<!-- Изготовить четыре продвинутых компонента -->
+<!-- Выточить укреплённый ствол -->
 <MFFG_Make_ReinforcedBarrel.label>выточить укреплённый ствол</MFFG_Make_ReinforcedBarrel.label>
 <MFFG_Make_ReinforcedBarrel.description>Выточить укреплённый ствол.</MFFG_Make_ReinforcedBarrel.description>
 <MFFG_Make_ReinforcedBarrel.jobString>Вытачивает укреплённый ствол</MFFG_Make_ReinforcedBarrel.jobString>
   
-
+	<!-- Изготовить гиперткань -->
+<MFFG_Make_Hyperweave.label>изготовить гиперткань x10</MFFG_Make_Hyperweave.label>
+<MFFG_Make_Hyperweave.description>Изготовить гиперткань. Самый технологичный материал для изготовления одежды.</MFFG_Make_Hyperweave.description>
+<MFFG_Make_Hyperweave.jobString>Изготавливает гиперткань</MFFG_Make_Hyperweave.jobString>
+  
 </LanguageData>

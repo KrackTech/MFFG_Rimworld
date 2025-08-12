@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- =========== исправление горелости металлов =========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Uranium" or defName="Jade" or defName="Gold" or defName="Silver" or defName="Plasteel" or defName="Steel"]/stuffProps/statFactors/Flammability</xpath>
+	<value>
+		<Flammability>0</Flammability>
+   </value>
+  </Operation>
+  
+</Patch>

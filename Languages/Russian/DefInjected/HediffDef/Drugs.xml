@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: high on wake-up -->
+  <MFFG_LastShift.label>под действием "последней смены"</MFFG_LastShift.label>
+  <!-- EN: Wake-up in the bloodstream. It fills the need for rest by stimulating the brain, and increases focus, allowing faster work. It also increases the psyfocus gains from meditation. -->
+  <MFFG_LastShift.description>"Последняя смена", попав в кровь, стимулирует мозг, уменьшая потребность в отдыхе и улучшая внимание, что позволяет быстрее выполнять любую работу. \nДлительный приём может вызывать необратимые патологии мозга.</MFFG_LastShift.description>
+  <!-- EN: a wake-up high -->
+  <MFFG_LastShift.labelNoun>действие "последней смены"</MFFG_LastShift.labelNoun>
+  
+  <MFFG_PsyBlockade.label>пси-блокада</MFFG_PsyBlockade.label>
+  <MFFG_PsyBlockade.description>Психоактивные области мозга подавлены препаратом.</MFFG_PsyBlockade.description>
+  <MFFG_PsyBlockade.labelNoun>действие "пси-блокады"</MFFG_PsyBlockade.labelNoun>
+  
+
+</LanguageData>

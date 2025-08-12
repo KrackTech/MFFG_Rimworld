@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+ 	  	<!-- =========== исправление  простого научного стола =========== -->
+  <Operation Class="PatchOperationSequence">
+  <operations>
+	<li Class="PatchOperationAdd">
+	  <xpath>/Defs/ResearchProjectDef[defName="MicroelectronicsBasics"]</xpath>
+      <value>
+        <requiredResearchFacilities></requiredResearchFacilities>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/ResearchProjectDef[defName="MicroelectronicsBasics"]/requiredResearchFacilities</xpath>
+      <value>
+		<li>MFFG_Lamp_Computer</li>
+      </value>
+    </li>
+  </operations>
+</Operation>
+ 		
+</Patch>

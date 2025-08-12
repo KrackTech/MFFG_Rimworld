@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+  	<!-- =========== исправление точности малой турели =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Gun_MiniTurret"]/statBases</xpath>
+    <value>
+	  <statBases>
+		<AccuracyTouch>0.9</AccuracyTouch>
+		<AccuracyShort>0.8</AccuracyShort>
+		<AccuracyMedium>0.5</AccuracyMedium>
+		<AccuracyLong>0.4</AccuracyLong>
+		<RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+		<DeteriorationRate>0</DeteriorationRate>
+		<Mass>5</Mass>
+		<Flammability>0</Flammability>
+      </statBases>
+    </value>
+  </Operation>
+  
+  	<!-- =========== исправление точности тяжёлой турели =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Gun_AutocannonTurret"]/statBases</xpath>
+    <value>
+	  <statBases>
+		<AccuracyTouch>0.9</AccuracyTouch>
+		<AccuracyShort>0.8</AccuracyShort>
+		<AccuracyMedium>0.7</AccuracyMedium>
+		<AccuracyLong>0.6</AccuracyLong>
+		<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+		<DeteriorationRate>0</DeteriorationRate>
+		<Mass>40</Mass>
+		<Flammability>0</Flammability>
+      </statBases>
+    </value>
+  </Operation>
+ 
+ 	<!-- =========== исправление точности снайперсокй турели =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Gun_TurretSniper"]/statBases</xpath>
+    <value>
+	  <statBases>
+		<AccuracyTouch>0.8</AccuracyTouch>
+		<AccuracyShort>0.85</AccuracyShort>
+		<AccuracyMedium>0.9</AccuracyMedium>
+		<AccuracyLong>0.95</AccuracyLong>
+		<RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
+		<DeteriorationRate>0</DeteriorationRate>
+		<Mass>40</Mass>
+		<Flammability>0</Flammability>
+      </statBases>
+    </value>
+  </Operation>
+ 
+  	<!-- =========== исправление урона снайперсокй турели =========== -->
+  <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Bullet_TurretSniper"]/projectile</xpath>
+    <value>
+	  <projectile>
+		<damageDef>Bullet</damageDef>
+		<damageAmountBase>80</damageAmountBase>
+		<speed>120</speed>
+		<stoppingPower>2</stoppingPower>
+		<armorPenetrationBase>1</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+ 
+ 
+ 
+</Patch>

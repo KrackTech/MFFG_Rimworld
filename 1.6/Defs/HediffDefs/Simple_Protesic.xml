@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Prosthetic spine -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>MFFG_SimpleProstheticSpine</defName>
+    <label>prosthetic spine</label>
+    <labelNoun>a prosthetic spine</labelNoun>
+    <description>Installation of special structures in the intervertebral space or in the bone, followed by their connection with each other using longitudinal beams, which significantly limits mobility and causes severe pain.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_SimpleProstheticSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>MFFG_SimpleProstheticSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.5</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <painOffset>0.2</painOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>MFFG_SimpleProstheticSpine</defName>
+    <label>prosthetic spine</label>
+    <description>A spine prosthesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Still, it is inferior to a real leg.</description>
+    <descriptionHyperlinks><RecipeDef>MFFG_Install_SimpleProstheticSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Silver>4</Silver>
+	  <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>MFFG_Install_SimpleProstheticSpine</defName>
+    <label>install prosthetic spine</label>
+    <description>Install a prosthetic spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>MFFG_SimpleProstheticSpine</ThingDef>
+      <HediffDef>MFFG_SimpleProstheticSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing prosthetic spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MFFG_SimpleProstheticSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MFFG_SimpleProstheticSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MFFG_SimpleProstheticSpine</addsHediff>
+  </RecipeDef>
+
+	<!-- Prosthetic Eye -->
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+    <defName>MFFG_Prosthetic_Eye</defName>
+    <label>prosthetic eye</label>
+    <labelNoun>a prosthetic eye</labelNoun>
+    <description>An installed small camera in the eye socket. It looks terrible, but it allows to see.</description>
+    <descriptionHyperlinks><ThingDef>MFFG_Prosthetic_Eye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>MFFG_Prosthetic_Eye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.75</partEfficiency>
+    </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+          <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+	
+	<ThingDef ParentName="BodyPartProstheticMakeableBase">
+		<defName>MFFG_Prosthetic_Eye</defName>
+		<label>prosthetic eye</label>
+		<description>A small camera for the eye socket. It looks terrible, but it allows to see.</description>
+		<descriptionHyperlinks><RecipeDef>MFFG_Install_Prosthetic_Eye</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Silver>10</Silver>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+		<defName>MFFG_Install_Prosthetic_Eye</defName>
+		<label>install prosthetic eye</label>
+		<description>Install a prosthetic eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MFFG_Prosthetic_Eye</ThingDef>
+			<HediffDef>MFFG_Prosthetic_Eye</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing prosthetic eye.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MFFG_Prosthetic_Eye</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MFFG_Prosthetic_Eye</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MFFG_Prosthetic_Eye</addsHediff>
+	</RecipeDef>
+
+
+</Defs>

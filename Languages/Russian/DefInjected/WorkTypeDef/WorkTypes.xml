@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <MFFG_Nurse.label>Фельтшер</MFFG_Nurse.label>
+  <!-- EN: Care for the sick, bring them food, cheer them up, and perform assigned duties. Nurses will care for colonists, prisoners and animals. -->
+  <MFFG_Nurse.description>Фельтшеры заботятся о больных, колонистах, пленниках и ижвотных, приносят им еду, навещают.</MFFG_Nurse.description>
+  <!-- EN: MFFG_Nurse -->
+  <MFFG_Nurse.gerundLabel>Ухаживать</MFFG_Nurse.gerundLabel>
+  <!-- EN: MFFG_Nurse -->
+  <MFFG_Nurse.labelShort>фельтшер</MFFG_Nurse.labelShort>
+  <!-- EN: MFFG_Nurseist -->
+  <MFFG_Nurse.pawnLabel>Фельтшер</MFFG_Nurse.pawnLabel>
+  <!-- EN: Do MFFG_Nurse at -->
+  <MFFG_Nurse.verb>Ухаживать</MFFG_Nurse.verb>
+  
+	
+	
+  <MFFG_Surgeon.label>Хирург</MFFG_Surgeon.label>
+  <!-- EN: Unskilled and easy tasks. Release prisoners and flick switches on machines. -->
+  <MFFG_Surgeon.description>Хирурги проводят операции поселенцам и пленникам.</MFFG_Surgeon.description>
+  <!-- EN: dealing with -->
+  <MFFG_Surgeon.gerundLabel>Оперирует</MFFG_Surgeon.gerundLabel>
+  <!-- EN: basic -->
+  <MFFG_Surgeon.labelShort>хирург</MFFG_Surgeon.labelShort>
+  <!-- EN: Worker -->
+  <MFFG_Surgeon.pawnLabel>Хирург</MFFG_Surgeon.pawnLabel>
+  <!-- EN: Deal with -->
+  <MFFG_Surgeon.verb>Оперировать</MFFG_Surgeon.verb>
+	
+	
+  
+  <MFFG_Butcher.label>Мясник</MFFG_Butcher.label>
+  <!-- EN: Clear snow, pollution and clean the floor in the home area. -->
+  <MFFG_Butcher.description>Мясники разделывают туши.</MFFG_Butcher.description>
+  <!-- EN: MFFG_Butcher -->
+  <MFFG_Butcher.gerundLabel>Разделывать</MFFG_Butcher.gerundLabel>
+  <!-- EN: clean -->
+  <MFFG_Butcher.labelShort>мясник</MFFG_Butcher.labelShort>
+  <!-- EN: Cleaner -->
+  <MFFG_Butcher.pawnLabel>Мясник</MFFG_Butcher.pawnLabel>
+  <!-- EN: Clean -->
+  <MFFG_Butcher.verb>Разделывать</MFFG_Butcher.verb>
+	
+	
+  
+  <MFFG_Brewing.label>Пивовар</MFFG_Brewing.label>
+  <!-- EN: Build things that you've designated, and fix damaged or broken-down buildings. -->
+  <MFFG_Brewing.description>Пивовары варят сусло, заправляют и опустошают бочки для брожения.</MFFG_Brewing.description>
+  <!-- EN: constructing -->
+  <MFFG_Brewing.gerundLabel>Варить</MFFG_Brewing.gerundLabel>
+  <!-- EN: construct -->
+  <MFFG_Brewing.labelShort>пивовар</MFFG_Brewing.labelShort>
+  <!-- EN: Constructor -->
+  <MFFG_Brewing.pawnLabel>Пивовар</MFFG_Brewing.pawnLabel>
+  <!-- EN: Construct -->
+  <MFFG_Brewing.verb>Варить</MFFG_Brewing.verb>
+  
+	
+	
+  <MFFG_Repair.label>Ремонтник</MFFG_Repair.label>
+  <!-- EN: Prepare meals and butcher meat. -->
+  <MFFG_Repair.description>Ремонтники чинят повреждённые сооружения.</MFFG_Repair.description>
+  <!-- EN: MFFG_Repair -->
+  <MFFG_Repair.gerundLabel>Чинить</MFFG_Repair.gerundLabel>
+  <!-- EN: cook -->
+  <MFFG_Repair.labelShort>ремонтник</MFFG_Repair.labelShort>
+  <!-- EN: Cook -->
+  <MFFG_Repair.pawnLabel>Ремонтник</MFFG_Repair.pawnLabel>
+  <!-- EN: Cook -->
+  <MFFG_Repair.verb>Чинить</MFFG_Repair.verb>
+  
+	
+	
+  <MFFG_Deconstruct.label>Демонтажник</MFFG_Deconstruct.label>
+  <!-- EN: Do general low-skilled labor at work stations. This includes stonecutting, smelting, and more. -->
+  <MFFG_Deconstruct.description>Демонтажники разбирают конструкции.</MFFG_Deconstruct.description>
+  <!-- EN: MFFG_Deconstruct -->
+  <MFFG_Deconstruct.gerundLabel>Демонтировать</MFFG_Deconstruct.gerundLabel>
+  <!-- EN: craft -->
+  <MFFG_Deconstruct.labelShort>демонтажник</MFFG_Deconstruct.labelShort>
+  <!-- EN: Crafter -->
+  <MFFG_Deconstruct.pawnLabel>Демонтажник</MFFG_Deconstruct.pawnLabel>
+  <!-- EN: Craft at -->
+  <MFFG_Deconstruct.verb>Демонтировать</MFFG_Deconstruct.verb>
+  
+	
+
+  <Doctor.label>Врач</Doctor.label>
+  <!-- EN: Treat the sick, bring them food, cheer them up, and perform assigned surgeries. Doctors will care for both colonists and prisoners. -->
+  <Doctor.description>Врачи проводят лечение пациентов и пленников.</Doctor.description>
+  <!-- EN: doctoring -->
+  <Doctor.gerundLabel>Лечить</Doctor.gerundLabel>
+  <!-- EN: doctor -->
+  <Doctor.labelShort>врач</Doctor.labelShort>
+  <!-- EN: Doctor -->
+  <Doctor.pawnLabel>Врач</Doctor.pawnLabel>
+  <!-- EN: Care for -->
+  <Doctor.verb>Лечить</Doctor.verb>
+
+
+
+  
+  <MFFG_Drilling.label>Бурильщик</MFFG_Drilling.label>
+  <!-- EN: Extinguish fires in the colony. -->
+  <MFFG_Drilling.description>Бурильщики работают с буровыми установками.</MFFG_Drilling.description>
+  <!-- EN: firefighting -->
+  <MFFG_Drilling.gerundLabel>Выполнять бурение</MFFG_Drilling.gerundLabel>
+  <!-- EN: firefight -->
+  <MFFG_Drilling.labelShort>бурильщик</MFFG_Drilling.labelShort>
+  <!-- EN: MFFG_Drilling -->
+  <MFFG_Drilling.pawnLabel>Бурильщик</MFFG_Drilling.pawnLabel>
+  <!-- EN: Extinguish -->
+  <MFFG_Drilling.verb>Выполнять бурение</MFFG_Drilling.verb>
+
+
+
+  <MFFG_Drugs.label>Лаборант</MFFG_Drugs.label>
+  <!-- EN: Plant seeds, harvest crops, and forage for wild plants. -->
+  <MFFG_Drugs.description>Лаборанты синетзируют препараты в лаборатории.</MFFG_Drugs.description>
+  <!-- EN: MFFG_Drugs -->
+  <MFFG_Drugs.gerundLabel>Синтезировать</MFFG_Drugs.gerundLabel>
+  <!-- EN: grow -->
+  <MFFG_Drugs.labelShort>лаборант</MFFG_Drugs.labelShort>
+  <!-- EN: Grower -->
+  <MFFG_Drugs.pawnLabel>Лаборант</MFFG_Drugs.pawnLabel>
+  <!-- EN: Grow -->
+  <MFFG_Drugs.verb>Синтезировать</MFFG_Drugs.verb>
+  
+	
+	
+  <MFFG_Fabrication.label>Инженер</MFFG_Fabrication.label>
+  <!-- EN: Tame, train, harvest resources from and slaughter animals. -->
+  <MFFG_Fabrication.description>Инженеры производят изделия на высокоточном станке.</MFFG_Fabrication.description>
+  <!-- EN: MFFG_Fabrication -->
+  <MFFG_Fabrication.gerundLabel>Производить</MFFG_Fabrication.gerundLabel>
+  <!-- EN: handle -->
+  <MFFG_Fabrication.labelShort>инженер</MFFG_Fabrication.labelShort>
+  <!-- EN: Handler -->
+  <MFFG_Fabrication.pawnLabel>Инженер</MFFG_Fabrication.pawnLabel>
+  <!-- EN: Handle -->
+  <MFFG_Fabrication.verb>Производить</MFFG_Fabrication.verb>
+  
+	
+	
+  <MFFG_Machining.label>Мастер</MFFG_Machining.label>
+  <!-- EN: Carry things to where they need to be. -->
+  <MFFG_Machining.description>Мастера изготавливают изделия на верстаках.</MFFG_Machining.description>
+  <!-- EN: MFFG_Machining -->
+  <MFFG_Machining.gerundLabel>Изготавливать</MFFG_Machining.gerundLabel>
+  <!-- EN: haul -->
+  <MFFG_Machining.labelShort>мастер</MFFG_Machining.labelShort>
+  <!-- EN: Hauler -->
+  <MFFG_Machining.pawnLabel>Мастер</MFFG_Machining.pawnLabel>
+  <!-- EN: Haul -->
+  <MFFG_Machining.verb>Изготовить</MFFG_Machining.verb>
+	
+	
+  
+  <MFFG_Scan.label>Исследователь</MFFG_Scan.label>
+  <!-- EN: Kill animals which are designated to be hunted. -->
+  <MFFG_Scan.description>Исследователи выполняют сканирование на сканерах дальнего действия и глубинных сканерах.</MFFG_Scan.description>
+  <!-- EN: MFFG_Scan -->
+  <MFFG_Scan.gerundLabel>Сканировать</MFFG_Scan.gerundLabel>
+  <!-- EN: hunt -->
+  <MFFG_Scan.labelShort>исследователь</MFFG_Scan.labelShort>
+  <!-- EN: Hunter -->
+  <MFFG_Scan.pawnLabel>Исследователь</MFFG_Scan.pawnLabel>
+  <!-- EN: Hunt -->
+  <MFFG_Scan.verb>Исследовать</MFFG_Scan.verb>
+  
+  <Mining.label>Шахтёр</Mining.label>
+  <!-- EN: Digging and drilling. -->
+  <Mining.description>Шахтёры копают породу, выполняют бурение и добывают полезные ископаемые.</Mining.description>
+  <!-- EN: mining -->
+  <Mining.gerundLabel>Разрабатывать породу</Mining.gerundLabel>
+  <!-- EN: mine -->
+  <Mining.labelShort>шахтёр</Mining.labelShort>
+  <!-- EN: Miner -->
+  <Mining.pawnLabel>Шахтёр</Mining.pawnLabel>
+  <!-- EN: Mine -->
+  <Mining.verb>Разрабатывать породу</Mining.verb>
+  
+  <Patient.label>Пациент</Patient.label>
+  <!-- EN: Go to a medical bed for treatment if you have an immediately life-threatening health condition. -->
+  <Patient.description>Пациенты отправляются на медицинскую кровать, если у них серьёзные проблемы со здоровьем.</Patient.description>
+  <!-- EN: patienting -->
+  <Patient.gerundLabel>Лечиться</Patient.gerundLabel>
+  <!-- EN: patient -->
+  <Patient.labelShort>пациент</Patient.labelShort>
+  <!-- EN: Patient -->
+  <Patient.pawnLabel>Пациент</Patient.pawnLabel>
+  <!-- EN: Become patient -->
+  <Patient.verb>Лечиться</Patient.verb>
+  
+  <PatientBedRest.label>Отдых</PatientBedRest.label>
+  <!-- EN: Rest in bed to recuperate from not-immediately-life-threatening medical problems. -->
+  <PatientBedRest.description>Поселенцы отдыхают в кровати, чтобы восстановиться от не угрожающих жизни проблем со здоровьем.</PatientBedRest.description>
+  <!-- EN: resting in bed -->
+  <PatientBedRest.gerundLabel>Отдыхать</PatientBedRest.gerundLabel>
+  <!-- EN: bed rest -->
+  <PatientBedRest.labelShort>отдых</PatientBedRest.labelShort>
+  <!-- EN: Bed rester -->
+  <PatientBedRest.pawnLabel>Отдыхающий</PatientBedRest.pawnLabel>
+  <!-- EN: Become patient -->
+  <PatientBedRest.verb>Отдыхать</PatientBedRest.verb>
+  
+  <PlantCutting.label>Садовод</PlantCutting.label>
+  <!-- EN: Cut or harvest plants as designated. -->
+  <PlantCutting.description>Садоводы рубят растения и собирают с них урожай.</PlantCutting.description>
+  <!-- EN: plant cutting -->
+  <PlantCutting.gerundLabel>Заниматься садоводством</PlantCutting.gerundLabel>
+  <!-- EN: plant cut -->
+  <PlantCutting.labelShort>садовод</PlantCutting.labelShort>
+  <!-- EN: Plant cutter -->
+  <PlantCutting.pawnLabel>Садовод</PlantCutting.pawnLabel>
+  <!-- EN: Cut -->
+  <PlantCutting.verb>Заниматься садоводством</PlantCutting.verb>
+  
+  <Research.label>Учёный</Research.label>
+  <!-- EN: Perform research work. -->
+  <Research.description>Учёные занимаются исследовательской работой.</Research.description>
+  <!-- EN: researching -->
+  <Research.gerundLabel>Исследовать</Research.gerundLabel>
+  <!-- EN: research -->
+  <Research.labelShort>учёный</Research.labelShort>
+  <!-- EN: Researcher -->
+  <Research.pawnLabel>Учёный</Research.pawnLabel>
+  <!-- EN: Research at -->
+  <Research.verb>Исследовать</Research.verb>
+  
+  <Smithing.label>Кузнец</Smithing.label>
+  <!-- EN: Create weapons and tools from raw materials, either as a blacksmith or by machining. Also repair mechanoids, if the colonist is a mechanitor. -->
+  <Smithing.description>Кузнецы, работая на кузнях и станках, изготавливают оружие и снаряжение. А будучи механиторами, также ремонтируют механоидов.</Smithing.description>
+  <!-- EN: smithing -->
+  <Smithing.gerundLabel>Ковать</Smithing.gerundLabel>
+  <!-- EN: smith -->
+  <Smithing.labelShort>кузнец</Smithing.labelShort>
+  <!-- EN: Smith -->
+  <Smithing.pawnLabel>Кузнец</Smithing.pawnLabel>
+  <!-- EN: Smith at -->
+  <Smithing.verb>Ковать</Smithing.verb>
+  
+  <Tailoring.label>Портной</Tailoring.label>
+  <!-- EN: Create apparel from raw materials. -->
+  <Tailoring.description>Портные шьют различные виды одежды.</Tailoring.description>
+  <!-- EN: tailoring -->
+  <Tailoring.gerundLabel>Шить</Tailoring.gerundLabel>
+  <!-- EN: tailor -->
+  <Tailoring.labelShort>портной</Tailoring.labelShort>
+  <!-- EN: Tailor -->
+  <Tailoring.pawnLabel>Портной</Tailoring.pawnLabel>
+  <!-- EN: Tailor at -->
+  <Tailoring.verb>Шить</Tailoring.verb>
+  
+  <Warden.label>Надзор</Warden.label>
+  <!-- EN: Manage, feed, chat with, and recruit prisoners. -->
+  <Warden.description>Надзиратели присматривают за пленниками: кормят, беседуют и вербуют.</Warden.description>
+  <!-- EN: wardening -->
+  <Warden.gerundLabel>Надзирать</Warden.gerundLabel>
+  <!-- EN: warden -->
+  <Warden.labelShort>надзор</Warden.labelShort>
+  <!-- EN: Warden -->
+  <Warden.pawnLabel>Надзиратель</Warden.pawnLabel>
+  <!-- EN: Handle -->
+  <Warden.verb>Надзирать</Warden.verb>
+	
+	
+	
+	
+	
+	  <!-- EN: Interact with anomalous entities. -->
+  <DarkStudy.description>Взаимодействие с аномальными феноменами.</DarkStudy.description>
+  <!-- EN: studying -->
+  <DarkStudy.gerundLabel>Исследовать</DarkStudy.gerundLabel>
+  <!-- EN: dark study -->
+  <DarkStudy.labelShort>оккультизм</DarkStudy.labelShort>
+  <!-- EN: Studier -->
+  <DarkStudy.pawnLabel>Исследователь</DarkStudy.pawnLabel>
+  <!-- EN: Study at -->
+  <DarkStudy.verb>Исследовать в</DarkStudy.verb>
+  
+</LanguageData>
