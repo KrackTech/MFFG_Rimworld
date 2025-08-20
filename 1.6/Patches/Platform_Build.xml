@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- =========== добавление  свойств пустым клеткам =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TerrainDef[defName = "Space"]</xpath>
+		<value>	 
+			<description>Outer space void , nothing to walk or build on... unless it's orbital platforms.</description>	
+			<statBases>
+			<WorkToBuild>8000</WorkToBuild>
+			<MarketValue>0</MarketValue>
+			<Flammability>0</Flammability>
+			</statBases>
+			<uiIconPath>RemovePlataform</uiIconPath>
+			<cropIcon>false</cropIcon>
+			<designationCategory>Odyssey</designationCategory>
+			<terrainAffordanceNeeded>MFFG_Platform</terrainAffordanceNeeded>
+    </value>
+  </Operation> 
+  
+  
+	<!-- =========== добавление  требований к строительству пустоты =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TerrainDef[defName = "Space"]/affordances</xpath>
+		<value>
+			<li>MFFG_VoidSpace</li>
+		</value>
+  </Operation>
+
+
+	<!-- =========== добавление строительства платформы =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TerrainDef[defName = "OrbitalPlatform"]</xpath>
+		<value>
+			<description>A solid orbital surface that allows walking in outer space. You can build all kinds of structures on it.</description>
+			<researchPrerequisites>
+				<li>BasicGravtech</li>
+			</researchPrerequisites>
+			<designationCategory>Odyssey</designationCategory>
+			<costList>
+				<Steel>25</Steel>
+			</costList>
+			<statBases>
+				<WorkToBuild>8000</WorkToBuild>
+				<MarketValue>0</MarketValue>
+			</statBases>
+			<affordances>
+				<li>Light</li>
+				<li>Medium</li>
+				<li>Heavy</li>
+				<li>Walkable</li>
+				<li>MFFG_VoidSpace</li>
+				<li>MFFG_Platform</li>
+			</affordances>
+			<terrainAffordanceNeeded>MFFG_VoidSpace</terrainAffordanceNeeded>
+		</value>
+  </Operation>
+	
+	
+	<!-- =========== добавление строительства платформы механоидов =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TerrainDef[defName = "MechanoidPlatform"]</xpath>
+		<value>
+			<description>A solid mechanoid orbital surface that allows walking in outer space. You can build all kinds of structures on it.</description>
+			<!-- <researchPrerequisites>
+				<li>BasicGravtech</li>
+			</researchPrerequisites>
+			<costList>
+				<Steel>25</Steel>
+			</costList>
+			<statBases>
+				<WorkToBuild>8000</WorkToBuild>
+				<MarketValue>0</MarketValue>
+			</statBases> -->
+			<affordances>
+				<li>Light</li>
+				<li>Medium</li>
+				<li>Heavy</li>
+				<li>Walkable</li>
+				<li>MFFG_VoidSpace</li>
+				<li>MFFG_Platform</li>
+			</affordances>
+			<terrainAffordanceNeeded>MFFG_VoidSpace</terrainAffordanceNeeded>
+		</value>
+  </Operation>
+
+
+
+
+  
+
+</Patch>

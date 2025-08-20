@@ -3,10 +3,19 @@
   
  
   
-  <!-- EN: improved turrets -->
   <MFFG_ImprovedTurrets.label>улучшенные турели</MFFG_ImprovedTurrets.label>
-  <!-- EN: Build new powerfull turrets. -->
   <MFFG_ImprovedTurrets.description>Новые улучшенные турели.</MFFG_ImprovedTurrets.description>
-
-  
+	
+	  
+  <MFFG_Soil_Plowing.label>возделывание почвы</MFFG_Soil_Plowing.label>
+  <MFFG_Soil_Plowing.description>Повышение плодородности почвы путём её возделывания.</MFFG_Soil_Plowing.description>
+	
+	
+  <MFFG_PsyBlockadeProduction.label>производство пси-блокады</MFFG_PsyBlockadeProduction.label>
+  <MFFG_PsyBlockadeProduction.description>Производство препарата, временно блокирующего психоактивные области мозга.</MFFG_PsyBlockadeProduction.description>
+	
+	
+	<MFFG_LastShiftProduction.label>производство "Последней смены"</MFFG_LastShiftProduction.label>
+  <MFFG_LastShiftProduction.description>Производство препарата, временно повышающего трудовые способности принявшего. Черезмерное упортребление может привести к повреждению мозга.</MFFG_LastShiftProduction.description>
+	
 </LanguageData>

@@ -2,20 +2,6 @@
 
 <Patch>
 
-	<!-- =========== исправление ёмкости химтопливных баков =========== -->
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
-    <xpath>Defs/ThingDef[defName="ChemfuelTank"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
-    <value>
-			<fuelCapacity>2000</fuelCapacity>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
-    <xpath>Defs/ThingDef[defName="LargeChemfuelTank"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
-    <value>
-			<fuelCapacity>5000</fuelCapacity>
-    </value>
-  </Operation>
 
 	<!-- =========== исправление эффективности монитора жизненных показателей =========== -->
   <Operation Class="PatchOperationReplace">
@@ -29,11 +15,12 @@
     </value>
   </Operation>
   
+	
   <!-- =========== исправление графики рекативного огнемёта =========== -->
-    <Operation Class="PatchOperationReplace">
+   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/graphicData/texPath</xpath>
     <value>
-		<texPath>Things/Item/Equipment/WeaponRanged/SmokeLauncher</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/SmokeLauncher</texPath>
     </value>
   </Operation>
   
@@ -42,191 +29,193 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GeothermalGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
     <value>
-	   <basePowerConsumption>-5600</basePowerConsumption>
+			<basePowerConsumption>-5600</basePowerConsumption>
     </value>
   </Operation>
   
-
+	
+	<!-- =========== исправление ванометрического генератора =========== -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "VanometricPowerCell"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>-2000</basePowerConsumption>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "VanometricPowerCell"]/costList</xpath>
+				<value>
+					<costList>
+						<Plasteel>200</Plasteel>
+						<ComponentSpacer>6</ComponentSpacer>
+						<MFFG_Power_Cell>4</MFFG_Power_Cell>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VanometricPowerCell"]</xpath>
+				<value>
+					<designationCategory>Power</designationCategory>
+					<researchPrerequisites>
+						<li>MFFG_AI_Core</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	
 
  	<!-- =========== добавление  перетаскиваемости топливных генераторов =========== -->
   <Operation Class="PatchOperationSequence">
-  <operations>
-	<li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/statBases</xpath>
-      <value>
-        <Mass>10</Mass>
-      </value>
-    </li>
-    <li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="WoodFiredGenerator"]</xpath>
-      <value>
-        <thingCategories>
-			<li>BuildingsProduction</li>
-		</thingCategories>
-		<minifiedDef>MinifiedThing</minifiedDef>
-      </value>
-    </li>
-	<li Class="PatchOperationReplace">
-      <xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
-      <value>
-        <basePowerConsumption>-2000</basePowerConsumption>
-      </value>
-    </li>
-  </operations>
-</Operation>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/statBases</xpath>
+				<value>
+					<Mass>10</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="WoodFiredGenerator"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsProduction</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>-2000</basePowerConsumption>
+				</value>
+			</li>
+		</operations>
+	</Operation>
   
   <Operation Class="PatchOperationSequence">
-  <operations>
-	<li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/statBases</xpath>
-      <value>
-        <Mass>10</Mass>
-      </value>
-    </li>
-    <li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]</xpath>
-      <value>
-        <thingCategories>
-			<li>BuildingsProduction</li>
-		</thingCategories>
-		<minifiedDef>MinifiedThing</minifiedDef>
-      </value>
-    </li>
-	<li Class="PatchOperationReplace">
-      <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
-      <value>
-        <basePowerConsumption>-2000</basePowerConsumption>
-      </value>
-    </li>
-  </operations>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/statBases</xpath>
+				<value>
+					<Mass>10</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsProduction</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>-2000</basePowerConsumption>
+				</value>
+			</li>
+		</operations>
   </Operation>
   
+	
  	<!-- =========== добавление  перетаскиваемости кондиционера =========== -->
   <Operation Class="PatchOperationSequence">
-  <operations>
-	<li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="Cooler"]/statBases</xpath>
-      <value>
-        <Mass>10</Mass>
-      </value>
-    </li>
-    <li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="Cooler"]</xpath>
-      <value>
-        <thingCategories>
-			<li>BuildingsProduction</li>
-		</thingCategories>
-		<minifiedDef>MinifiedThing</minifiedDef>
-      </value>
-    </li>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Cooler"]/statBases</xpath>
+				<value>
+					<Mass>10</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Cooler"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsProduction</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+  
+
+	<!-- =========== добавление  перетаскиваемости хайтек научного стола =========== -->
+  <Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HiTechResearchBench"]/statBases</xpath>
+				<value>
+					<Mass>100</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HiTechResearchBench"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsProduction</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
   </operations>
 </Operation>
   
 
-  	<!-- =========== добавление  перетаскиваемости хайтек научного стола =========== -->
+	<!-- =========== добавление  перетаскиваемости высокоточного верстака =========== -->
   <Operation Class="PatchOperationSequence">
-  <operations>
-	<li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="HiTechResearchBench"]/statBases</xpath>
-      <value>
-        <Mass>100</Mass>
-      </value>
-    </li>
-    <li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="HiTechResearchBench"]</xpath>
-      <value>
-        <thingCategories>
-					<li>BuildingsProduction</li>
-				</thingCategories>
-				<minifiedDef>MinifiedThing</minifiedDef>
-      </value>
-    </li>
-  </operations>
-</Operation>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="FabricationBench"]/statBases</xpath>
+				<value>
+					<Mass>200</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="FabricationBench"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsProduction</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
   
-
-  	<!-- =========== добавление  перетаскиваемости высокоточного верстака =========== -->
+  
+	<!-- =========== добавление  строений к научным столам =========== -->
   <Operation Class="PatchOperationSequence">
-  <operations>
-	<li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="FabricationBench"]/statBases</xpath>
-      <value>
-        <Mass>200</Mass>
-      </value>
-    </li>
-    <li Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="FabricationBench"]</xpath>
-      <value>
-        <thingCategories>
-					<li>BuildingsProduction</li>
-				</thingCategories>
-				<minifiedDef>MinifiedThing</minifiedDef>
-      </value>
-    </li>
-  </operations>
-</Operation>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath>
+				<value>
+					<li Class="CompProperties_AffectedByFacilities">
+						<linkableFacilities></linkableFacilities>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+				<value>
+					<li>MFFG_Computer</li>
+					<li>MFFG_Lamp_Computer</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">MechanoidProcessor</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
   
-
-  
-  	<!-- =========== исправление хайтек научного стола =========== -->
- <!--  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-    <value>
-	   <li>MFFG_AI_Core</li>
-	   <li>MFFG_Computer</li>
-    </value>
-  </Operation> -->
-  
-  	<!-- =========== исправление  простого научного стола =========== -->
-	
-      <!-- <Operation Class="PatchOperationAdd"> -->
-        <!-- <success>Always</success> -->
-        <!-- <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath> -->
-        <!-- <value> -->
-            <!-- <li Class="CompProperties_AffectedByFacilities"> -->
-                <!-- <linkableFacilities></linkableFacilities> -->
-            <!-- </li> -->
-        <!-- </value> -->
-    <!-- </Operation> -->
-	
-  <!-- <Operation Class="PatchOperationAdd"> -->
-    <!-- <xpath>Defs/ThingDef[defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath> -->
-    <!-- <value> -->
-	   <!-- <li>MFFG_Computer</li> -->
-    <!-- </value> -->
-  <!-- </Operation> -->
-  
-  
-<!-- =========== добавление  строений к научным столам =========== -->
-  <Operation Class="PatchOperationSequence">
-  <operations>
-	<li Class="PatchOperationAdd">
-	  <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath>
-      <value>
-	    <li Class="CompProperties_AffectedByFacilities">
-          <linkableFacilities></linkableFacilities>
-        </li>
-      </value>
-    </li>
-    <li Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-      <value>
-	    <li>MFFG_Computer</li>
-		<li>MFFG_Lamp_Computer</li>
-      </value>
-    </li>
-  </operations>
-</Operation>
-  
-  
-  
-  	<!-- =========== исправление хайтек научного стола =========== -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
     <value>
-	   <li>MFFG_AI_Core</li>
-	   <li>MFFG_Computer</li>
-	   <li>MFFG_Lamp_Computer</li>
+			<li>MFFG_AI_Core</li>
+			<li>MFFG_Computer</li>
+			<li>MFFG_Lamp_Computer</li>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">MechanoidProcessor</li>
     </value>
   </Operation>
   
@@ -239,57 +228,64 @@
     </value>
   </Operation>
 	
+	
 	<!-- =========== исправление эффективности батарей =========== -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Battery"]/comps/li[@Class="CompProperties_Battery"]/efficiency</xpath>
     <value>
-	   <efficiency>0.8</efficiency>
+			<efficiency>0.8</efficiency>
     </value>
   </Operation>
   
+	
 	<!-- =========== нагрев батарей =========== -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="Battery"]/comps</xpath>
     <value>
-		<li Class="CompProperties_HeatPusher">
-          <compClass>CompHeatPusherPowered</compClass>
-          <heatPerSecond>1</heatPerSecond>
-		</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>1</heatPerSecond>
+			</li>
     </value>
   </Operation>
   
+	
 	<!-- ==== Добавление медециснких инструментов==== -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="VitalsMonitor"]] | /Defs/thingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="VitalsMonitor"]]</xpath>
-        <value>
-            <li>MFFG_Surgical_Instruments</li>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="VitalsMonitor"]] | /Defs/thingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="VitalsMonitor"]]</xpath>
+		<value>
+			<li>MFFG_Surgical_Instruments</li>
+		</value>
+	</Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath>
-        <value>
-            <li Class="CompProperties_AffectedByFacilities">
-                <linkableFacilities></linkableFacilities>
-            </li>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/comps[not(li[@Class="CompProperties_AffectedByFacilities"])]</xpath>
+		<value>
+			<li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities></linkableFacilities>
+      </li>
+    </value>
+  </Operation>
+
 
 	<!-- ====Добавление чайного столика==== -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-        <value>
-            <li>MFFG_Cupboard</li>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		<value>
+			<li>MFFG_Cupboard</li>
+		</value>
+	</Operation>
 	
-		<!-- ====Добавление работы на маленькй плите==== -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/WorkGiverDef[defName="DoBillsCook"]/fixedBillGiverDefs</xpath>
-        <value>
-            <li>MFFG_Electric_Stove_Small</li>
-        </value>
-    </Operation>
+	
+	<!-- ====Добавление работы на маленькй плите==== -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsCook"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>MFFG_Electric_Stove_Small</li>
+		</value>
+	</Operation>
+	
+	
 	
 </Patch>

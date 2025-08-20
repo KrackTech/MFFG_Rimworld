@@ -2,7 +2,7 @@
 <Defs>
 
 
-	<TerrainDef>
+<!-- 	<TerrainDef>
 		<defName>MFFG_Soil</defName>
 		<label>soil</label>
 		<description>Standard soil. Tastes like dirt.</description>
@@ -15,7 +15,7 @@
 		<statBases>
 			<Beauty>-1</Beauty>
 			<Cleanliness>-1</Cleanliness>
-			<WorkToBuild>1100</WorkToBuild>
+			<WorkToBuild>2000</WorkToBuild>
 		</statBases>
 		<fertility>1.0</fertility>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -48,7 +48,9 @@
 			</li>
 		</tools>
 	</TerrainDef>
-
+ -->
+ 
+ 
 	<TerrainDef>
 		<defName>MFFG_Tilled_Soil</defName>
 		<label>tilled soil</label>
@@ -63,7 +65,7 @@
 		<statBases>
 			<Beauty>-1</Beauty>
 			<Cleanliness>-1</Cleanliness>
-			<WorkToBuild>2100</WorkToBuild>
+			<WorkToBuild>4000</WorkToBuild>
 		</statBases>
 		<fertility>2.0</fertility>
 		<avoidWander>true</avoidWander>

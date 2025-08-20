@@ -20,21 +20,11 @@
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
-      <!-- <drugCategory>Medical</drugCategory> -->
-      <baseIngestTicks>80</baseIngestTicks>
-      <ingestSound>Ingest_Inject</ingestSound>
-      <foodType>Processed, Fluid</foodType>
-      <baseIngestTicks>80</baseIngestTicks>
-      <ingestSound>Ingest_Inject</ingestSound>
       <ingestHoldOffsetStanding>
         <northDefault>
           <offset>(0.18,0,0)</offset>
         </northDefault>
       </ingestHoldOffsetStanding>
-      <ingestCommandString>Inject {0}</ingestCommandString>
-      <ingestReportString>Injecting {0}.</ingestReportString>
-      <useEatingSpeedStat>false</useEatingSpeedStat>
-      <chairSearchRadius>0</chairSearchRadius>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>MFFG_PsyBlockade</hediffDef>
@@ -44,7 +34,7 @@
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-      <researchPrerequisite>GoJuiceProduction</researchPrerequisite>
+      <researchPrerequisite>MFFG_PsyBlockadeProduction</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>

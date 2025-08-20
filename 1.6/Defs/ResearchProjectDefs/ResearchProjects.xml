@@ -1,6 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
+  <ResearchProjectDef>
+    <defName>MFFG_PsyBlockadeProduction</defName>
+    <label>psy-blokcade production</label>
+    <description>Production of a drug that temporarily blocks psychoactive areas of the brain.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MFFG_LastShiftProduction</defName>
+    <label>last shift production</label>
+    <description>Production of a drug that temporarily enhances the working abilities of the recipient. Excessive destruction can lead to brain damage.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>4.0</researchViewX>
+    <researchViewY>1.40</researchViewY>
+  </ResearchProjectDef>
+
+
+
+
 	<ResearchProjectDef>
 		<defName>MFFG_Soil_Plowing</defName>
 		<label>soil plowing</label>
@@ -10,16 +40,17 @@
 		<tags>
 		  <li>ClassicStart</li>
 		</tags>
-		<researchViewX>0.00</researchViewX>
-		<researchViewY>5.25</researchViewY>
+		<researchViewX>2.0</researchViewX>
+		<researchViewY>2.0</researchViewY>
 	</ResearchProjectDef>
+	
 	
   <ResearchProjectDef>
     <defName>MFFG_AI_Core</defName>
     <label>AI core</label>
     <description>Build archotec core which increase research speed and allow archotec research projects.</description>
     <baseCost>10000</baseCost>
-    <techLevel>Ultra</techLevel>
+    <techLevel>Archotech</techLevel>
     <prerequisites>
       <li>ShipComputerCore</li>
     </prerequisites>
@@ -27,7 +58,7 @@
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <researchViewX>20.0</researchViewX>
+    <researchViewX>23.0</researchViewX>
     <researchViewY>1.15</researchViewY>
   </ResearchProjectDef>
 
@@ -37,7 +68,7 @@
     <label>improved turrets</label>
     <description>Build new powerfull turrets.</description>
     <baseCost>10000</baseCost>
-    <techLevel>Ultra</techLevel>
+    <techLevel>Spacer</techLevel>
     <prerequisites>
       <li>HeavyTurrets</li>
     </prerequisites>
@@ -46,7 +77,7 @@
     </requiredResearchFacilities>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <researchViewX>17.00</researchViewX>
-    <researchViewY>2.20</researchViewY>
+    <researchViewY>2.50</researchViewY>
   </ResearchProjectDef>
 
   

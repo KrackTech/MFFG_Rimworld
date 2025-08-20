@@ -139,19 +139,19 @@
   <!-- =========== исправление размера стака еды =========== -->
   
       	<!-- =========== исправление размера стака блюд =========== -->
-<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[@Name='MealBaseIngredientless']/stackLimit</xpath>
-	<value>
-		<stackLimit>50</stackLimit>
-   </value>
+		<value>
+			<stackLimit>50</stackLimit>
+		</value>
   </Operation>
   
         	<!-- =========== исправление размера стака ресурсов =========== -->
-<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[@Name='ResourceBase']/stackLimit</xpath>
-	<value>
-		<stackLimit>200</stackLimit>
-   </value>
+		<value>
+			<stackLimit>200</stackLimit>
+		</value>
   </Operation>
   
        <!-- =========== исправление размера стака продуктов =========== -->

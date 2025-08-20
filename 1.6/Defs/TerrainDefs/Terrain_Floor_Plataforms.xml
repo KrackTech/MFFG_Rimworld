@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainAffordanceDef>
+    <defName>MFFG_VoidSpace</defName>
+    <label>Space</label>
+    <order>2400</order>
+  </TerrainAffordanceDef>
+  
+  <TerrainAffordanceDef>
+    <defName>MFFG_Platform</defName>
+    <label>Orbital Platform</label>
+    <order>2400</order>
+  </TerrainAffordanceDef>  
+  
+
+
+
+</Defs>

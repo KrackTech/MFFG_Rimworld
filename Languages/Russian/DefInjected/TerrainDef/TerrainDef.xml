@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<LanguageData>
+<OrbitalPlatform.label>Орбитальная платформа</OrbitalPlatform.label>
+<OrbitalPlatform.description>Твердая поверхность, позволяющая передвигаться в открытом космосе. На ней можно строить всевозможные сооружения.</OrbitalPlatform.description>
+
+<MechanoidPlatform.label>Орбитальная платформа механоидов</MechanoidPlatform.label>
+<MechanoidPlatform.description>Твердая поверхность, позволяющая передвигаться в открытом космосе. На ней можно строить всевозможные сооружения.</MechanoidPlatform.description>
+
+<Space.description>Космическая пустота, не на чем ходить и не на чем строить... если только это не орбитальные платформы.</Space.description>
+
+
+<MFFG_Tilled_Soil.label>Вспаханная почва</MFFG_Tilled_Soil.label>
+<MFFG_Tilled_Soil.description>Вспаханная почва для эффективного выращивания сельскохозяйственных культур.</MFFG_Tilled_Soil.description>
+
+
+</LanguageData>
+

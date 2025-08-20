@@ -5,27 +5,28 @@
 	<!-- =========== добавление  рецептов на людях =========== -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName = "Human"]/recipes</xpath>
-	<value>
-		<li>MFFG_Shock_Therapy</li>
-		<li>MFFG_Gastric_Lavage</li>
+		<value>
+			<li>MFFG_Shock_Therapy</li>
+			<li>MFFG_Gastric_Lavage</li>
+			<li>MFFG_MedicalyInducedComa</li>
     </value>
   </Operation> 
   
-    	<!-- =========== добавление  рецепта крафта миномётного ствола в высокоточный верстак =========== -->
+	<!-- =========== добавление  рецепта крафта миномётного ствола в высокоточный верстак =========== -->
   <Operation Class="PatchOperationInsert">
     <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes/li[text()="Make_ComponentIndustrial"]</xpath>
-	<order>Append</order>
-	<value>
-		<li>MFFG_Make_ReinforcedBarrel</li>
+		<order>Append</order>
+		<value>
+			<li>MFFG_Make_ReinforcedBarrel</li>
     </value>
   </Operation>
   
-  	<!-- =========== добавление  рецепта крафта компонентов в верстак =========== -->
+	<!-- =========== добавление  рецепта крафта компонентов в верстак =========== -->
   <Operation Class="PatchOperationInsert">
     <xpath>Defs/ThingDef[defName = "TableMachining"]/recipes/li[text()="ButcherCorpseMechanoid"]</xpath>
-	<order>Append</order>
-	<value>
-		<li>MFFG_Make_Simple_ComponentIndustrial</li>
+		<order>Append</order>
+		<value>
+			<li>MFFG_Make_Simple_ComponentIndustrial</li>
     </value>
   </Operation>
 
@@ -33,57 +34,21 @@
 	<!-- =========== добавление  рецепта крафта компонентов =========== -->
   <Operation Class="PatchOperationInsert">
     <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes/li[text()="Make_ComponentIndustrial"]</xpath>
-	<order>Append</order>
-	<value>
-		<li>MFFG_Make_Four_ComponentIndustrial</li>
+		<order>Append</order>
+		<value>
+			<li>MFFG_Make_Four_ComponentIndustrial</li>
     </value>
   </Operation>
 
 	<!-- =========== добавление  рецепта крафта космических компонентов =========== -->
   <Operation Class="PatchOperationInsert">
     <xpath>Defs/ThingDef[defName = "FabricationBench"]/recipes/li[text()="Make_ComponentSpacer"]</xpath>
-	<order>Append</order>
-	<value>
-		<li>MFFG_Make_Four_ComponentSpacer</li>
+		<order>Append</order>
+		<value>
+			<li>MFFG_Make_Four_ComponentSpacer</li>
     </value>
   </Operation>
-  
-	<!-- =========== добавление  рецепта крафта алкоголя =========== -->
-<!--   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName = "BiofuelRefinery"]/recipes</xpath>
-	<value>
-		<li>MFFG_Make_Alcohol</li>
-    </value>
-  </Operation> -->
-  
   	
-	<!-- =========== добавление крафта ванометрического генератора механоидов =========== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName = "VanometricPowerCell"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
-		<value>
-			<basePowerConsumption>-2000</basePowerConsumption>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName = "VanometricPowerCell"]/costList</xpath>
-		<value>
-			<costList>
-				<Plasteel>200</Plasteel>
-				<ComponentSpacer>6</ComponentSpacer>
-				<MFFG_Power_Cell>4</MFFG_Power_Cell>
-			</costList>
-		</value>
-	</Operation>
-		<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName = "VanometricPowerCell"]</xpath>
-		<value>
-			<designationCategory>Power</designationCategory>
-		    <researchPrerequisites>
-				<li>MFFG_AI_Core</li>
-			</researchPrerequisites>
-		</value>
-	</Operation>
-	
 
   
 

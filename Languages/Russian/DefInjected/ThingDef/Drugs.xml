@@ -3,10 +3,14 @@
   
   <MFFG_LastShift.label>последняя смена</MFFG_LastShift.label>
   <MFFG_LastShift.description>Синтетический препарат, улучшающий рабочие навыки. \nДлительный приём может вызывать необратимые патологии мозга.</MFFG_LastShift.description>
+  <MFFG_LastShift.ingestible.ingestCommandString>Принять {lookup: {0}; Case; 3}</MFFG_LastShift.ingestible.ingestCommandString>
+  <MFFG_LastShift.ingestible.ingestReportString>Принимает {lookup: {0}; Case; 3}</MFFG_LastShift.ingestible.ingestReportString>
   
 		
   <MFFG_PsyBlockade.label>пси-блокада</MFFG_PsyBlockade.label>
   <MFFG_PsyBlockade.description>Синтетический препарат, подавляющий области мозга, отвечающие за психочувствительности.</MFFG_PsyBlockade.description>
+  <MFFG_PsyBlockade.ingestible.ingestCommandString>Принять {lookup: {0}; Case; 3}</MFFG_PsyBlockade.ingestible.ingestCommandString>
+  <MFFG_PsyBlockade.ingestible.ingestReportString>Принимает {lookup: {0}; Case; 3}</MFFG_PsyBlockade.ingestible.ingestReportString>
   
   
 </LanguageData>

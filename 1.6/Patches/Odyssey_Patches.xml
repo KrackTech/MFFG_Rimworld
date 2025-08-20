@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- =========== исправление ёмкости химтопливных баков =========== -->
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="ChemfuelTank"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+    <value>
+			<fuelCapacity>2000</fuelCapacity>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="LargeChemfuelTank"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+    <value>
+			<fuelCapacity>5000</fuelCapacity>
+    </value>
+  </Operation>
+	
+	<!-- =========== исправление блока жизнеобеспечения на платформах =========== -->
+	<Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="LifeSupportUnit"]/statBases</xpath>
+				<value>
+					<Mass>10</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="LifeSupportUnit"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsFurniture</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="LifeSupportUnit"]/building</xpath>
+				<value>
+					<building>
+						<isEdifice>false</isEdifice>
+						<claimable>true</claimable>
+						<isAttachment>true</isAttachment>
+						<deconstructible>true</deconstructible>
+						<expandHomeArea>false</expandHomeArea>
+					</building>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="LifeSupportUnit"]/comps/li[@Class="CompProperties_Power"]</xpath>
+				<value>
+					<li Class="CompProperties_Power">
+						<compClass>CompPowerTrader</compClass>
+						<basePowerConsumption>100</basePowerConsumption>
+						<transmitsPower>false</transmitsPower>
+					</li>
+				</value>
+			</li>
+  </operations>
+</Operation>
+	
+	
+	<!-- =========== исправление компьютера механоидов =========== -->
+	<Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]/statBases</xpath>
+				<value>
+					<Mass>100</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]</xpath>
+				<value>
+					<thingCategories>
+						<li>BuildingsFurniture</li>
+					</thingCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]/building</xpath>
+				<value>
+					<building>
+						<isEdifice>true</isEdifice>
+						<deconstructible>true</deconstructible>
+						<claimable>true</claimable>
+						<repairable>true</repairable>
+						<isInert>true</isInert>
+					</building>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]</xpath>
+				<value>
+					<comps></comps>
+					<placeWorkers>
+					<li>PlaceWorker_ShowFacilitiesConnections</li>
+					</placeWorkers>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]/comps</xpath>
+				<value>
+					<li Class="CompProperties_Power">
+						<compClass>CompPowerTrader</compClass>
+						<basePowerConsumption>1500</basePowerConsumption>
+						<transmitsPower>false</transmitsPower>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]/comps</xpath>
+				<value>
+					<li Class="CompProperties_Facility">
+						<statOffsets>
+							<ResearchSpeedFactor>0.25</ResearchSpeedFactor>
+						</statOffsets>
+						<maxSimultaneous>1</maxSimultaneous>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+				<value>
+					<li>MechanoidProcessor</li>
+				</value>
+			</li>
+  </operations>
+</Operation>
+	
+	
+	
+</Patch>
