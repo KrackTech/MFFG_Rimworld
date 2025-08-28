@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+
+
+
+
+
+	<!-- =========== исправление эффективности монитора жизненных показателей =========== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Apparel_PlateArmor"]/apparel</xpath>
+    <value>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+    </value>
+  </Operation>
+  
+	
+ 
+</Patch>

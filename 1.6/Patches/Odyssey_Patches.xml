@@ -67,16 +67,26 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]/statBases</xpath>
 				<value>
-					<Mass>100</Mass>
+					<Mass>200</Mass>
+					<MarketValue>5000</MarketValue>
+					<Flammability>0</Flammability>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="MechanoidProcessor"]</xpath>
 				<value>
+					<costList>
+						<Steel>75</Steel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+					</costList>
 					<thingCategories>
-						<li>BuildingsFurniture</li>
+						<li>BuildingsSpecial</li>
 					</thingCategories>
 					<minifiedDef>MinifiedThing</minifiedDef>
+					<tradeability>Sellable</tradeability>
+					<tradeTags>
+						<li>ExoticBuilding</li>
+					</tradeTags>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -130,6 +140,27 @@
   </operations>
 </Operation>
 	
+	<!-- =========== исправление скафандра с трупов =========== -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="Apparel_Vacsuit"]/apparel</xpath>
+    <value>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="Apparel_VacsuitChildren"]/apparel</xpath>
+    <value>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+    </value>
+  </Operation>
+	
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/ThingDef[defName="Apparel_VacsuitHelmet"]/apparel</xpath>
+    <value>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+    </value>
+  </Operation>
 	
 	
 </Patch>

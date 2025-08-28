@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+  <!-- =========== исправление обесчеловечивания =========== -->
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
+    <xpath>Defs/HediffDef[defName="Inhumanized"]/stages</xpath>
+    <value>
+			<stages>
+				<li>
+					<painOffset>-0.5</painOffset>
+					<opinionOfOthersFactor>0</opinionOfOthersFactor>
+					<statOffsets>
+						<ComfyTemperatureMin>-16</ComfyTemperatureMin>
+					</statOffsets>
+					<disablesNeeds>
+						<li>Beauty</li>
+						<li>Outdoors</li>
+					</disablesNeeds>
+				</li>
+			</stages>
+    </value>
+  </Operation>
+	
+</Patch>

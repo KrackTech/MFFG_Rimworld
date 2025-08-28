@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: mace -->
+  <MFFG_Hand_Shield.label>щит</MFFG_Hand_Shield.label>
+  <!-- EN: A refined club, engineered for efficient swinging and deadly impacts. -->
+  <MFFG_Hand_Shield.description>Вид вооружения, предназначенный для защиты от холодного и огнестрельного оружия.</MFFG_Hand_Shield.description>
+  <!-- EN: handle -->
+  <MFFG_Hand_Shield.tools.shield.label>плоскость</MFFG_Hand_Shield.tools.shield.label>
+
+</LanguageData>
