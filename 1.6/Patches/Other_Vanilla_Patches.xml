@@ -65,7 +65,11 @@
 		</operations>
 	</Operation>
 	
+	<!-- =========== добавление  перетаскиваемости дерева души =========== -->
 	
+	<Operation Class="PatchOperationRemove" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/minifiedDef</xpath>
+	</Operation>
 
  	<!-- =========== добавление  перетаскиваемости топливных генераторов =========== -->
   <Operation Class="PatchOperationSequence">

@@ -3,7 +3,7 @@
 
   <!--=============== Alcohol ====================-->
   
-  <ThingDef ParentName="ResourceBase">
+<!--   <ThingDef ParentName="ResourceBase">
     <defName>MFFG_Alcohol</defName>
     <label>alcohol</label>
     <description>A synthetic precursor chemical. While it is useless on its own, many drugs require neutroamine as an ingredient.</description>
@@ -40,19 +40,19 @@
         <wickTicks>70~150</wickTicks>
       </li>
     </comps>
-  </ThingDef>
+  </ThingDef> -->
   
 
 
 <!--=============== Power Cell ====================-->
     
-   <ThingDef ParentName="ResourceBase">
+<ThingDef ParentName="ResourceBase">
     <defName>MFFG_Power_Cell</defName>
     <label>power cell</label>
     <description>A vanometric energy core that can extract energy from quantum foam fluctuations indefinitely.\n\n The cell itself is useless, but it is necessary for creating other highly technological autonomous items. Energy cells can be obtained by dismantling unstable energy cells from mechanoids.</description>
     <graphicData>
-      <texPath>Things/MFFG_Power_Cell</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+		<texPath>Things/MFFG_Power_Cell</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
     <soundInteract>Metal_Drop</soundInteract>
@@ -61,32 +61,32 @@
 	<tickerType>Normal</tickerType>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MarketValue>550</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>2</Mass>
-      <Flammability>1</Flammability>
+		<MarketValue>550</MarketValue>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Mass>2</Mass>
+		<Flammability>1</Flammability>
     </statBases>
     <thingCategories>
-      <li>ItemsMisc</li>
+		<li>ItemsMisc</li>
     </thingCategories>
     <techLevel>Spacer</techLevel>
     <tradeTags>
-      <li>ExoticMisc</li>
+		<li>ExoticMisc</li>
     </tradeTags>
 	<comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>14.9</explosiveRadius>
-        <explosiveDamageType>BombSuper</explosiveDamageType>
-        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
-        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
-        <chanceToStartFire>0.22</chanceToStartFire>
-        <damageFalloff>true</damageFalloff>
-        <explosionEffect>GiantExplosion</explosionEffect>
-        <explosionSound>Explosion_GiantBomb</explosionSound>
-        <wickTicks>60~120</wickTicks>
+		<li Class="CompProperties_Explosive">
+			<explosiveRadius>14.9</explosiveRadius>
+			<explosiveDamageType>BombSuper</explosiveDamageType>
+			<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+			<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+			<chanceToStartFire>0.22</chanceToStartFire>
+			<damageFalloff>true</damageFalloff>
+			<explosionEffect>GiantExplosion</explosionEffect>
+			<explosionSound>Explosion_GiantBomb</explosionSound>
+			<wickTicks>60~120</wickTicks>
       </li>
-    </comps>
-  </ThingDef>
+	</comps>
+ </ThingDef>
   
   
 </Defs>

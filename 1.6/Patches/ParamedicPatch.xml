@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Mech_Paramedic"]/race</xpath>
+    <value>
+      <mechFixedSkillLevel>15</mechFixedSkillLevel>
+    </value>
+  </Operation>
+</Patch>

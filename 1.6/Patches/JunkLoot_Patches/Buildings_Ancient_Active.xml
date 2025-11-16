@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- =========== исправление получения хлама с мусора на карте =========== -->
+	<Operation Class="PatchOperationSequence"  MayRequire="Ludeon.RimWorld.Ideology">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientTerminal"]</xpath>
+				<value>
+					<costList>
+						<Steel>3</Steel>
+						<ComponentIndustrial>1</ComponentIndustrial>
+					</costList>
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>		
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientEnemyTerminal"]</xpath>
+				<value>
+					<costList>
+						<Steel>3</Steel>
+						<ComponentIndustrial>1</ComponentIndustrial>
+					</costList>
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>		
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientHermeticCrate"]</xpath>
+				<value>
+					<costList>
+						<Steel>5</Steel>
+						<ComponentIndustrial>1</ComponentIndustrial>
+					</costList>
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientSecurityCrate"]</xpath>
+				<value>
+					<costList>
+						<Steel>3</Steel>
+					</costList>
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>		
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientCommsConsole"]</xpath>
+				<value>
+					<costList>
+						<Steel>5</Steel>
+						<Silver>10</Silver>
+						<ComponentIndustrial>2</ComponentIndustrial>
+					</costList>
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientFuelNode"]</xpath>
+				<value>
+					<costList>
+						<Steel>5</Steel>
+					</costList>
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>		
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AncientCryptosleepPod"]</xpath>
+				<value>     
+					<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+				</value>	
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="AncientCryptosleepPod"]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>3</Steel>
+						<ComponentIndustrial>1</ComponentIndustrial>
+					</costList>
+				</value>	
+			</li>
+		</operations>
+	</Operation>
+</Patch>

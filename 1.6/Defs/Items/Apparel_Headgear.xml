@@ -3,7 +3,7 @@
 
 
   <!-- ================================== Helmets ====================================-->
-  
+<!--   
   <ThingDef ParentName="ApparelArmorHelmetPowerBase">
     <defName>Apparel_PowerArmorHelmet</defName>
     <label>marine helmet</label>
@@ -19,80 +19,80 @@
     <recipeMaker>
       <displayPriority>100</displayPriority>
     </recipeMaker>
-  </ThingDef>
+  </ThingDef> -->
 
 
 
-	<ThingDef Name="MFFG_VisorBase" ParentName="ApparelArmorHelmetReconBase" Abstract="True" MayRequire="Ludeon.RimWorld.Royalty">
-		<techLevel>Spacer</techLevel>
-		<graphicData>
-			<texPath>Things/Pawn/Humanlike/Apparel/Gunlink/Gunlink</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+<ThingDef Name="MFFG_VisorBase" ParentName="ApparelArmorHelmetReconBase" Abstract="True" MayRequire="Ludeon.RimWorld.Royalty">
+	<techLevel>Spacer</techLevel>
+	<graphicData>
+		<texPath>Things/Pawn/Humanlike/Apparel/Gunlink/Gunlink</texPath>
+	<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <ArmorRating_Sharp>0</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0</ArmorRating_Blunt>
-      <ArmorRating_Heat>0</ArmorRating_Heat>
-      <Insulation_Cold>0</Insulation_Cold>
-      <Insulation_Heat>0</Insulation_Heat>
+		<ArmorRating_Sharp>0</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0</ArmorRating_Blunt>
+		<ArmorRating_Heat>0</ArmorRating_Heat>
+		<Insulation_Cold>0</Insulation_Cold>
+		<Insulation_Heat>0</Insulation_Heat>
     </statBases>
-		<equippedStatOffsets>
-      <ToxicEnvironmentResistance>0.0</ToxicEnvironmentResistance>
-      <VacuumResistance>0.0</VacuumResistance>
+	<equippedStatOffsets>
+		<ToxicEnvironmentResistance>0.0</ToxicEnvironmentResistance>
+		<VacuumResistance>0.0</VacuumResistance>
     </equippedStatOffsets>
     <recipeMaker>
-      <researchPrerequisite>Gunlink</researchPrerequisite>
-      <displayPriority>400</displayPriority>
+		<researchPrerequisite>Gunlink</researchPrerequisite>
+		<displayPriority>400</displayPriority>
     </recipeMaker>
     <costList>
-      <ComponentSpacer>1</ComponentSpacer>
-      <Plasteel>10</Plasteel>
+		<ComponentSpacer>1</ComponentSpacer>
+		<Plasteel>10</Plasteel>
     </costList>
     <apparel>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Gunlink/Gunlink</wornGraphicPath>
-      <renderSkipFlags>
-        <li>None</li>
-      </renderSkipFlags>
-      <countsAsClothingForNudity>false</countsAsClothingForNudity>
-      <bodyPartGroups Inherit="False">
-        <li>UpperHead</li>
-      </bodyPartGroups>
-    </apparel>
-    <tradeTags>
-      <li>Clothing</li>
-    </tradeTags>
+		<wornGraphicPath>Things/Pawn/Humanlike/Apparel/Gunlink/Gunlink</wornGraphicPath>
+		<renderSkipFlags>
+			<li>None</li>
+		</renderSkipFlags>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+		<bodyPartGroups Inherit="False">
+			<li>UpperHead</li>
+		</bodyPartGroups>
+	</apparel>
+	<tradeTags>
+		<li>Clothing</li>
+	</tradeTags>
     <thingSetMakerTags Inherit="False">
-      <li>RewardStandardLowFreq</li>
+		<li>RewardStandardLowFreq</li>
     </thingSetMakerTags>
     <comps Inherit="False">
-      <li Class="CompProperties_Biocodable"/>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Styleable" />
-      <li>
-        <compClass>CompColorable</compClass>
-      </li>
+		<li Class="CompProperties_Biocodable"/>
+		<li Class="CompProperties_Forbiddable"/>
+		<li Class="CompProperties_Styleable" />
+		<li>
+			<compClass>CompColorable</compClass>
+		</li>
     </comps>
-  </ThingDef>
+</ThingDef>
 
 
 
  <!-- ==================== Медецинский визор =================== -->
  
-  <ThingDef ParentName="MFFG_VisorBase" MayRequire="Ludeon.RimWorld.Royalty">
+<ThingDef ParentName="MFFG_VisorBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>MFFG_Apparel_Medlink</defName>
     <label>medlink</label>
     <description>Augmented reality glasses contain a built-in AI surgeon that displays graphical instructions for treatment and surgery. The visor has a built-in scanner that detects damage in the patient's body.  It does not provide any protection when worn.\n\n Similar visors are used by doctors of utopian worlds.</description>
     <equippedStatOffsets>
-      <MedicalTendSpeed>0.5</MedicalTendSpeed>
-			<MedicalTendQuality>0.2</MedicalTendQuality>
-			<MedicalSurgerySuccessChance>0.1</MedicalSurgerySuccessChance>
+		<MedicalTendSpeed>0.5</MedicalTendSpeed>
+		<MedicalTendQuality>0.2</MedicalTendQuality>
+		<MedicalSurgerySuccessChance>0.1</MedicalSurgerySuccessChance>
     </equippedStatOffsets> 
     <apparel>
-      <tags Inherit="False">
-        <li>Medlink</li>
-      </tags>
-    </apparel>
-  </ThingDef>
+		<tags Inherit="False">
+			<li>Medlink</li>
+		</tags>
+	</apparel>
+</ThingDef>
 
 	<!-- ==================== Визор =================== -->
 
@@ -101,32 +101,32 @@
     <label>casuallink</label>
     <description>Augmented reality glasses contain built-in AI for solving everyday tasks. They do not provide any protection when worn.</description>
     <equippedStatOffsets>
-      <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
-			<GeneralLaborSpeed>0.15</GeneralLaborSpeed>
-    </equippedStatOffsets>
+		<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+		<GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+	</equippedStatOffsets>
     <apparel>
-      <tags Inherit="False">
-        <li>Casuallink</li>
-      </tags>
+		<tags Inherit="False">
+			<li>Casuallink</li>
+		</tags>
     </apparel>
-  </ThingDef>
+ </ThingDef>
  
 	<!-- ==================== Строительный визор =================== -->
 	 
-  <ThingDef ParentName="MFFG_VisorBase">
+<ThingDef ParentName="MFFG_VisorBase">
     <defName>MFFG_Apparel_Buildlink</defName>
     <label>buildlink</label>
     <description>Augmented reality glasses contain a built-in AI architect that helps with construction. The visor does not provide any protection when worn.</description>  
     <equippedStatOffsets>
-      <ConstructionSpeed>0.3</ConstructionSpeed>
-			<ConstructSuccessChance>0.3</ConstructSuccessChance>
+		<ConstructionSpeed>0.3</ConstructionSpeed>
+		<ConstructSuccessChance>0.3</ConstructSuccessChance>
     </equippedStatOffsets>
     <apparel>
-      <tags Inherit="False">
-        <li>Buildlink</li>
-      </tags>
+		<tags Inherit="False">
+			<li>Buildlink</li>
+		</tags>
     </apparel>
-  </ThingDef>
+ </ThingDef>
   
   
 
